@@ -354,7 +354,7 @@ function websocketConnect() {
 			$.ajax({
 				Url: `${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters`,
 				type: "get",
-				dataType: "jsonp",
+				dataType: "json",
 				jsonp: "callback",
 				jsonpCallback:"jsonpCallback",
 				beforeSend:function(){
