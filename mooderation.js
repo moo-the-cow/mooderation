@@ -210,11 +210,12 @@ var envJsonSource = "env.json";
 var envJsonRequest = $.getJSON(envJsonSource, function(envdata) {
 	env = { version: dataVersion, data: envdata };
 
-	/*if(env.data.environment == "Production")
+	if(env.data.environment == "Production")
 	{
 		$("#userlistbutton").hide();
 		$("#raidirl").hide();
-	}*/
+		$("#modmessage").hide();
+	}
 
 	var raidlistJsonSource = `${env.data.raidListUrl}`;
 	$.getJSON(raidlistJsonSource, function(raidlistdata) {
@@ -338,35 +339,18 @@ function websocketConnect() {
 		clearInterval(interval);
 		intervalTime = 0;
 		// get users in chat initially - this is IMPORTANT for other stuff
-		if(env.data.environment != "Production")
-		{
-			$.getJSON(`${env.data.twitchUsersUrl}/${config.channel}`, function(data) {
-				tempUserList = data;
-			});
-		}
-		else
+		if(env.data.environment == "Production")
 		{
 			/*
 			$.getJSON(`${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters?callback=?`, function(data) {
 				tempUserList = data;
 			});
 			*/
-			$.ajax({
-				Url: `${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters`,
-				crossOrigin: true,
-				type: "get",
-				dataType: "jsonp",
-				jsonp: "callback",
-				jsonpCallback:"jsonpCallback",
-				beforeSend:function(){
-					console.log("loading before send");
-				},
-				success: function (data) {
-					console.log(JSON.stringify(data));
-				},
-				error: function () {
-					console.log("system error");
-				}
+		}
+		else
+		{
+			$.getJSON(`${env.data.twitchUsersUrl}/${config.channel}`, function(data) {
+				tempUserList = data;
 			});
 		}
 	};
