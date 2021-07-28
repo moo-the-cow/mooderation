@@ -355,7 +355,7 @@ function websocketConnect() {
 				Url: `${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters`,
 				crossOrigin: true,
 				type: "get",
-				dataType: "json",
+				dataType: "jsonp",
 				jsonp: "callback",
 				jsonpCallback:"jsonpCallback",
 				beforeSend:function(){
