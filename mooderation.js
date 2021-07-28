@@ -206,7 +206,7 @@ else
 		$("#chatwindow").append(chatMessageHtml(item));
 	});
 }
-var envJsonSource = "env.json";
+var envJsonSource = "env.dev.json";
 var envJsonRequest = $.getJSON(envJsonSource, function(envdata) {
 	env = { version: dataVersion, data: envdata };
 
@@ -244,6 +244,7 @@ if(env.data.debug) {
 	});
 }
 */
+/*
 if(badwords.list.size == 0)
 {
 	var badwordJsonSource = "badwordlist.json";
@@ -252,6 +253,7 @@ if(badwords.list.size == 0)
 		badwords = { version: dataVersion, list: data };
 	});
 }
+*/
 var excludemodwhisperJsonSource = "exclude_mods_whisper.json";
 $.getJSON(excludemodwhisperJsonSource, function(data) {
 	data.push(config.username);
