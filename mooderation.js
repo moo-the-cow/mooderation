@@ -352,21 +352,19 @@ function websocketConnect() {
 			});
 			*/
 			$.ajax({
-				Url: `${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters?callback=?`,
+				Url: `${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters`,
 				type: "post",
 						Data: "request parameter",
 				dataType: "jsonp",
 				jsonp: "callback",
 				jsonpCallback:"jsonpCallback",
 				beforeSend:function(){
-								addLoading('Effort in query, please wait');
+								
 				},
 				success: function (data) {
-					removeLoading();
 					console.log(data);
 				},
 				error: function () {
-					removeLoading();
 								Alert("system error")
 				}
 			});
