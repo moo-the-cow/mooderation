@@ -206,7 +206,7 @@ else
 		$("#chatwindow").append(chatMessageHtml(item));
 	});
 }
-var envJsonSource = "env.dev.json";
+var envJsonSource = "env.json";
 var envJsonRequest = $.getJSON(envJsonSource, function(envdata) {
 	env = { version: dataVersion, data: envdata };
 
