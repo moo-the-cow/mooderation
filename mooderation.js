@@ -351,7 +351,23 @@ function websocketConnect() {
 				tempUserList = data;
 			});
 			*/
-			
+			$.ajax({
+				Url: `${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters`,
+				crossOrigin: true,
+				type: "get",
+				dataType: "json",
+				jsonp: "callback",
+				jsonpCallback:"jsonpCallback",
+				beforeSend:function(){
+					console.log("loading before send");
+				},
+				success: function (data) {
+					console.log(JSON.stringify(data));
+				},
+				error: function () {
+					console.log("system error");
+				}
+			});
 		}
 	};
 	twitchWebsocket.onmessage = event => {

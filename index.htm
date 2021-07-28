@@ -63,21 +63,5 @@
 <div id="userlistoverlay"></div>
 <div id="userlistpopup"><div id="userlistclose">X</div><div id="userlist"><button class="danger" id="banfilteredusers">MASS BAN</button><button class="danger" id="timeoutfilteredusers">MASS TIMEOUT</button><br/><input id="filterusers" type="text" maxlength="100" placeholder="Type here to filter Users" /><h2></h2><p></p></div></div>
 <script src="mooderation.min.js" type="text/javascript"></script>
-<script>
-	$.ajax({
-		Url: `${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters`,
-		type: "get",
-		dataType: "jsonp",
-		beforeSend:function(){
-			console.log("loading before send");
-		},
-		success: function (data) {
-			console.log(JSON.stringify(data));
-		},
-		error: function () {
-			console.log("system error");
-		}
-	});
-	</script>
 </body>
 </html>
