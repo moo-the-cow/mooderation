@@ -359,13 +359,13 @@ function websocketConnect() {
 				jsonp: "callback",
 				jsonpCallback:"jsonpCallback",
 				beforeSend:function(){
-								
+					console.log("loading before send");
 				},
 				success: function (data) {
 					console.log(data);
 				},
 				error: function () {
-								Alert("system error")
+					console.log("system error");
 				}
 			});
 		}
