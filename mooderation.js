@@ -346,8 +346,29 @@ function websocketConnect() {
 		}
 		else
 		{
+			/*
 			$.getJSON(`${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters?callback=?`, function(data) {
 				tempUserList = data;
+			});
+			*/
+			$.ajax({
+				Url: `${env.data.twitchUsersUrl}/group/user/${config.channel}/chatters?callback=?`,
+				type: "post",
+						Data: "request parameter",
+				dataType: "jsonp",
+				jsonp: "callback",
+				jsonpCallback:"jsonpCallback",
+				beforeSend:function(){
+								addLoading('Effort in query, please wait');
+				},
+				success: function (data) {
+					removeLoading();
+					console.log(data);
+				},
+				error: function () {
+					removeLoading();
+								Alert("system error")
+				}
 			});
 		}
 	};
