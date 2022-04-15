@@ -1,1 +1,926 @@
-[{"raidlistId":1,"streamerIds":"225025135,40164087","streamerLoginNames":"illairl,kaarujp","userId":"169185650","userName":"robcdee","displayName":"robcdee","clipAllowed":true},{"raidlistId":2,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"130727794","userName":"yunicorn19","displayName":"Yunicorn19","clipAllowed":true},{"raidlistId":3,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"67852884","userName":"exbc","displayName":"EXBC","clipAllowed":true},{"raidlistId":4,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"142797941","userName":"awkwards_travel","displayName":"Awkwards_Travel","clipAllowed":true},{"raidlistId":5,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"134433708","userName":"charming_jo","displayName":"Charming_Jo","clipAllowed":true},{"raidlistId":6,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"270232021","userName":"justketh","displayName":"justketh","clipAllowed":true},{"raidlistId":7,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"400613002","userName":"ppim","displayName":"ppim","clipAllowed":true},{"raidlistId":8,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"464213413","userName":"sandy_pastagirl","displayName":"샌디앤킴","clipAllowed":true},{"raidlistId":9,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"219529719","userName":"g_lilmonstar","displayName":"g_lilmonstar","clipAllowed":true},{"raidlistId":10,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"177428709","userName":"eric_abroad","displayName":"Eric_Abroad","clipAllowed":true},{"raidlistId":11,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"176648991","userName":"qrooks","displayName":"QrooKs","clipAllowed":true},{"raidlistId":12,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"59016177","userName":"cooksux","displayName":"CookSux","clipAllowed":true},{"raidlistId":14,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"558769154","userName":"dantheliontv","displayName":"DanTheLionTV","clipAllowed":true},{"raidlistId":15,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"111589942","userName":"redbeard","displayName":"RedBeard","clipAllowed":true},{"raidlistId":16,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"107741643","userName":"nohaileeno","displayName":"NoHaileeNo","clipAllowed":true},{"raidlistId":17,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"147539451","userName":"sorabbang629","displayName":"소라___","clipAllowed":true},{"raidlistId":18,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"432065909","userName":"tyongeee","displayName":"tyongeee","clipAllowed":true},{"raidlistId":19,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"171515604","userName":"tracy_haoma","displayName":"tracy_haoma","clipAllowed":true},{"raidlistId":20,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"152723467","userName":"jumpy_jinny","displayName":"점피지니","clipAllowed":true},{"raidlistId":21,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"465987079","userName":"beddle","displayName":"Beddle","clipAllowed":true},{"raidlistId":23,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"103727078","userName":"shaylajennings","displayName":"ShaylaJennings","clipAllowed":true},{"raidlistId":24,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"141916172","userName":"rekstizzy","displayName":"rekstizzy","clipAllowed":true},{"raidlistId":26,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"421905773","userName":"kkyumingming","displayName":"뀨밍밍","clipAllowed":true},{"raidlistId":27,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"134443525","userName":"haeppyhour","displayName":"HaeppyHour","clipAllowed":true},{"raidlistId":28,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"407816061","userName":"yummy_2","displayName":"저뉸쓰_","clipAllowed":true},{"raidlistId":29,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"296003","userName":"shilo","displayName":"shilo","clipAllowed":true},{"raidlistId":30,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"234973404","userName":"waterlynn","displayName":"waterlynn","clipAllowed":true},{"raidlistId":31,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"107159969","userName":"nezst","displayName":"nezst","clipAllowed":true},{"raidlistId":32,"streamerIds":"225025135,40164087","streamerLoginNames":"illairl,kaarujp","userId":"523037144","userName":"mochi_bunnys2","displayName":"Mochi_BunnyS2","clipAllowed":true},{"raidlistId":33,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"70264584","userName":"nekaria","displayName":"Nekaria","clipAllowed":true},{"raidlistId":34,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"188430219","userName":"iriskymm","displayName":"IrisKymm","clipAllowed":true},{"raidlistId":35,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"100544756","userName":"deathsie","displayName":"DEATHSIE","clipAllowed":true},{"raidlistId":36,"streamerIds":"225025135,40164087","streamerLoginNames":"illairl,kaarujp","userId":"129043031","userName":"m_o_o_","displayName":"m_o_o_","clipAllowed":true},{"raidlistId":39,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"76020989","userName":"joeykaotyk","displayName":"JOEYKAOTYK","clipAllowed":true},{"raidlistId":40,"streamerIds":"225025135","streamerLoginNames":"illairl","userId":"40164087","userName":"kaarujp","displayName":"Kaarujp","clipAllowed":true},{"raidlistId":41,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"144198370","userName":"intheskymaria","displayName":"intheskymaria","clipAllowed":true},{"raidlistId":42,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"40785540","userName":"kuri","displayName":"Kuri","clipAllowed":true},{"raidlistId":43,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"152429316","userName":"cashmeow","displayName":"cashmeow","clipAllowed":true},{"raidlistId":44,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"627684031","userName":"anniemanny","displayName":"anniemanny","clipAllowed":true},{"raidlistId":45,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"510473442","userName":"crazy_japanese","displayName":"crazy_japanese","clipAllowed":true},{"raidlistId":46,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"31873092","userName":"kesshin","displayName":"Kesshin","clipAllowed":true},{"raidlistId":48,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"20873211","userName":"itsgaijira","displayName":"ItsGaijira","clipAllowed":true},{"raidlistId":49,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"119944342","userName":"nickyliner999","displayName":"Nickyliner999","clipAllowed":true},{"raidlistId":51,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"157207647","userName":"cosmic_rabbit","displayName":"Cosmic_Rabbit","clipAllowed":true},{"raidlistId":52,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"225025135","userName":"illairl","displayName":"illaIRL","clipAllowed":true},{"raidlistId":53,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"485226784","userName":"kanagang","displayName":"KanaGang","clipAllowed":true},{"raidlistId":54,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"518488548","userName":"shurikento","displayName":"ShuriKento","clipAllowed":true},{"raidlistId":55,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"514429158","userName":"sushipotato","displayName":"sushipotato","clipAllowed":true},{"raidlistId":56,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"400156072","userName":"japandyjones","displayName":"JapandyJones","clipAllowed":true},{"raidlistId":57,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"64256865","userName":"pelleyj","displayName":"PelleyJ","clipAllowed":true},{"raidlistId":58,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"617600418","userName":"ruuna_chu","displayName":"ruuna_chu","clipAllowed":true},{"raidlistId":59,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"105168040","userName":"milkypuff","displayName":"milkypuff","clipAllowed":true},{"raidlistId":60,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"40529817","userName":"4amlaundry","displayName":"4amlaundry","clipAllowed":true},{"raidlistId":62,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"549564765","userName":"annabeezyy","displayName":"annabeezyy","clipAllowed":true},{"raidlistId":63,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"36782974","userName":"archjp","displayName":"ArchJP","clipAllowed":true},{"raidlistId":64,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"26505972","userName":"relit","displayName":"relit","clipAllowed":true},{"raidlistId":65,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"452160901","userName":"bottlehead","displayName":"bottlehead","clipAllowed":true},{"raidlistId":66,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"613684108","userName":"yui_umechan","displayName":"yui_umechan","clipAllowed":true},{"raidlistId":67,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"59632045","userName":"lukethenuke95","displayName":"lukethenuke95","clipAllowed":true},{"raidlistId":71,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"166905587","userName":"maninjapan","displayName":"maninjapan","clipAllowed":true},{"raidlistId":72,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"157207647","userName":"cosmic_rabbit","displayName":"cosmic_rabbit","clipAllowed":true},{"raidlistId":73,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"673478143","userName":"nomadicgaijin","displayName":"NomadicGaijin","clipAllowed":true},{"raidlistId":74,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"208706512","userName":"arijapan","displayName":"arijapan","clipAllowed":true},{"raidlistId":75,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"409662755","userName":"kr0wslive","displayName":"Kr0wslive","clipAllowed":true},{"raidlistId":76,"streamerIds":"40164087","streamerLoginNames":"supersonic540","userId":"27793112","userName":"supersonic540","displayName":"Supersonic540","clipAllowed":true},{"raidlistId":77,"streamerIds":"40164087","streamerLoginNames":"kaarujp","userId":"438548697","userName":"elliegato","displayName":"elliegato","clipAllowed":true}]
+[
+    {
+      "raidListId": 1,
+      "fromStreamerId": 1,
+      "toStreamerId": 4,
+      "lastRaided": "2022-02-02T23:24:44.163",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 2,
+      "fromStreamerId": 2,
+      "toStreamerId": 4,
+      "lastRaided": "2022-02-02T23:25:30.07",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 3,
+      "fromStreamerId": 1,
+      "toStreamerId": 5,
+      "lastRaided": "2022-02-02T23:25:44.49",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 4,
+      "fromStreamerId": 2,
+      "toStreamerId": 5,
+      "lastRaided": "2022-02-02T23:25:48.87",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 5,
+      "fromStreamerId": 1,
+      "toStreamerId": 6,
+      "lastRaided": "2022-02-02T23:26:08.463",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 6,
+      "fromStreamerId": 2,
+      "toStreamerId": 6,
+      "lastRaided": "2022-02-02T23:26:12.373",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 7,
+      "fromStreamerId": 1,
+      "toStreamerId": 7,
+      "lastRaided": "2022-02-02T23:26:26.12",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 8,
+      "fromStreamerId": 1,
+      "toStreamerId": 8,
+      "lastRaided": "2022-02-02T23:26:45.8",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 9,
+      "fromStreamerId": 1,
+      "toStreamerId": 9,
+      "lastRaided": "2022-02-02T23:26:55.12",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 10,
+      "fromStreamerId": 1,
+      "toStreamerId": 10,
+      "lastRaided": "2022-02-02T23:27:07.913",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 11,
+      "fromStreamerId": 1,
+      "toStreamerId": 11,
+      "lastRaided": "2022-02-02T23:27:24.26",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 12,
+      "fromStreamerId": 1,
+      "toStreamerId": 12,
+      "lastRaided": "2022-02-02T23:27:29.427",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 13,
+      "fromStreamerId": 1,
+      "toStreamerId": 13,
+      "lastRaided": "2022-02-02T23:27:34.78",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 14,
+      "fromStreamerId": 1,
+      "toStreamerId": 14,
+      "lastRaided": "2022-02-02T23:27:44.15",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 15,
+      "fromStreamerId": 1,
+      "toStreamerId": 15,
+      "lastRaided": "2022-02-02T23:27:50.473",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 16,
+      "fromStreamerId": 1,
+      "toStreamerId": 16,
+      "lastRaided": "2022-02-02T23:27:58.247",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 17,
+      "fromStreamerId": 1,
+      "toStreamerId": 17,
+      "lastRaided": "2022-02-02T23:28:07.393",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 18,
+      "fromStreamerId": 1,
+      "toStreamerId": 18,
+      "lastRaided": "2022-02-02T23:28:16.617",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 19,
+      "fromStreamerId": 2,
+      "toStreamerId": 18,
+      "lastRaided": "2022-02-02T23:28:20.92",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 20,
+      "fromStreamerId": 1,
+      "toStreamerId": 19,
+      "lastRaided": "2022-02-02T23:28:31.833",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 21,
+      "fromStreamerId": 1,
+      "toStreamerId": 20,
+      "lastRaided": "2022-02-02T23:28:40.187",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 22,
+      "fromStreamerId": 1,
+      "toStreamerId": 21,
+      "lastRaided": "2022-02-02T23:28:48.86",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 23,
+      "fromStreamerId": 1,
+      "toStreamerId": 22,
+      "lastRaided": "2022-02-02T23:28:53.907",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 24,
+      "fromStreamerId": 1,
+      "toStreamerId": 23,
+      "lastRaided": "2022-02-02T23:29:00.67",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 25,
+      "fromStreamerId": 1,
+      "toStreamerId": 24,
+      "lastRaided": "2022-02-02T23:29:05.697",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 26,
+      "fromStreamerId": 1,
+      "toStreamerId": 25,
+      "lastRaided": "2022-02-02T23:29:57.163",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 27,
+      "fromStreamerId": 1,
+      "toStreamerId": 26,
+      "lastRaided": "2022-02-02T23:30:03.723",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 28,
+      "fromStreamerId": 1,
+      "toStreamerId": 27,
+      "lastRaided": "2022-02-02T23:30:08.803",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 29,
+      "fromStreamerId": 1,
+      "toStreamerId": 28,
+      "lastRaided": "2022-02-02T23:30:50.867",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 30,
+      "fromStreamerId": 1,
+      "toStreamerId": 29,
+      "lastRaided": "2022-02-02T23:30:59.14",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 31,
+      "fromStreamerId": 1,
+      "toStreamerId": 30,
+      "lastRaided": "2022-02-02T23:31:08.81",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 32,
+      "fromStreamerId": 2,
+      "toStreamerId": 30,
+      "lastRaided": "2022-02-02T23:31:12.16",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 33,
+      "fromStreamerId": 1,
+      "toStreamerId": 31,
+      "lastRaided": "2022-02-02T23:31:20.617",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 34,
+      "fromStreamerId": 1,
+      "toStreamerId": 32,
+      "lastRaided": "2022-02-02T23:31:27.4",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 35,
+      "fromStreamerId": 1,
+      "toStreamerId": 33,
+      "lastRaided": "2022-02-02T23:31:33.997",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 36,
+      "fromStreamerId": 1,
+      "toStreamerId": 34,
+      "lastRaided": "2022-02-02T23:31:41.707",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 37,
+      "fromStreamerId": 2,
+      "toStreamerId": 34,
+      "lastRaided": "2022-02-02T23:31:47.82",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 38,
+      "fromStreamerId": 1,
+      "toStreamerId": 35,
+      "lastRaided": "2022-02-02T23:31:59.653",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 39,
+      "fromStreamerId": 1,
+      "toStreamerId": 36,
+      "lastRaided": "2022-02-02T23:32:28.94",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 40,
+      "fromStreamerId": 3,
+      "toStreamerId": 36,
+      "lastRaided": "2022-02-02T23:32:32.87",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 41,
+      "fromStreamerId": 2,
+      "toStreamerId": 37,
+      "lastRaided": "2022-02-02T23:34:30.363",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 42,
+      "fromStreamerId": 2,
+      "toStreamerId": 38,
+      "lastRaided": "2022-02-02T23:34:40.59",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 43,
+      "fromStreamerId": 2,
+      "toStreamerId": 39,
+      "lastRaided": "2022-02-02T23:34:46.77",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 44,
+      "fromStreamerId": 2,
+      "toStreamerId": 40,
+      "lastRaided": "2022-02-02T23:34:54.59",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 45,
+      "fromStreamerId": 2,
+      "toStreamerId": 41,
+      "lastRaided": "2022-02-02T23:35:43.277",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 46,
+      "fromStreamerId": 2,
+      "toStreamerId": 42,
+      "lastRaided": "2022-02-02T23:35:46.743",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 47,
+      "fromStreamerId": 2,
+      "toStreamerId": 43,
+      "lastRaided": "2022-02-02T23:35:49.913",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 48,
+      "fromStreamerId": 2,
+      "toStreamerId": 44,
+      "lastRaided": "2022-02-02T23:35:53.29",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 49,
+      "fromStreamerId": 2,
+      "toStreamerId": 45,
+      "lastRaided": "2022-02-02T23:35:57.32",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 50,
+      "fromStreamerId": 2,
+      "toStreamerId": 46,
+      "lastRaided": "2022-02-02T23:36:01.563",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 51,
+      "fromStreamerId": 2,
+      "toStreamerId": 47,
+      "lastRaided": "2022-02-02T23:36:04.83",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 52,
+      "fromStreamerId": 2,
+      "toStreamerId": 48,
+      "lastRaided": "2022-02-02T23:36:08.503",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 53,
+      "fromStreamerId": 2,
+      "toStreamerId": 49,
+      "lastRaided": "2022-02-02T23:36:11.44",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 54,
+      "fromStreamerId": 2,
+      "toStreamerId": 50,
+      "lastRaided": "2022-02-02T23:36:15.77",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 55,
+      "fromStreamerId": 2,
+      "toStreamerId": 51,
+      "lastRaided": "2022-03-29T10:06:11.497",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 56,
+      "fromStreamerId": 2,
+      "toStreamerId": 52,
+      "lastRaided": "2022-02-02T23:36:22.73",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 57,
+      "fromStreamerId": 2,
+      "toStreamerId": 53,
+      "lastRaided": "2022-02-02T23:36:25.743",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 58,
+      "fromStreamerId": 2,
+      "toStreamerId": 54,
+      "lastRaided": "2022-02-02T23:36:29.807",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 59,
+      "fromStreamerId": 2,
+      "toStreamerId": 55,
+      "lastRaided": "2022-02-02T23:36:33.41",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 60,
+      "fromStreamerId": 2,
+      "toStreamerId": 56,
+      "lastRaided": "2022-02-02T23:36:36.753",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 61,
+      "fromStreamerId": 2,
+      "toStreamerId": 57,
+      "lastRaided": "2022-02-02T23:36:40.06",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 62,
+      "fromStreamerId": 2,
+      "toStreamerId": 58,
+      "lastRaided": "2022-02-02T23:36:43.157",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 63,
+      "fromStreamerId": 2,
+      "toStreamerId": 59,
+      "lastRaided": "2022-02-02T23:36:46.267",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 64,
+      "fromStreamerId": 2,
+      "toStreamerId": 60,
+      "lastRaided": "2022-03-25T15:34:07.153",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 65,
+      "fromStreamerId": 2,
+      "toStreamerId": 61,
+      "lastRaided": "2022-02-02T23:36:54.37",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 66,
+      "fromStreamerId": 2,
+      "toStreamerId": 62,
+      "lastRaided": "2022-02-02T23:36:57.68",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 67,
+      "fromStreamerId": 2,
+      "toStreamerId": 63,
+      "lastRaided": "2022-02-02T23:37:00.327",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 68,
+      "fromStreamerId": 2,
+      "toStreamerId": 64,
+      "lastRaided": "2022-02-02T23:37:03.413",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 69,
+      "fromStreamerId": 2,
+      "toStreamerId": 65,
+      "lastRaided": "2022-02-19T15:25:13.54",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 70,
+      "fromStreamerId": 2,
+      "toStreamerId": 66,
+      "lastRaided": "2022-02-02T23:37:11.037",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 71,
+      "fromStreamerId": 1,
+      "toStreamerId": 67,
+      "lastRaided": "2022-02-02T23:37:15.21",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 72,
+      "fromStreamerId": 2,
+      "toStreamerId": 68,
+      "lastRaided": "2022-02-02T23:37:19.837",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 73,
+      "fromStreamerId": 2,
+      "toStreamerId": 69,
+      "lastRaided": "2022-02-02T23:37:25.5",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 74,
+      "fromStreamerId": 2,
+      "toStreamerId": 70,
+      "lastRaided": "2022-02-02T23:37:33.67",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 75,
+      "fromStreamerId": 2,
+      "toStreamerId": 71,
+      "lastRaided": "2022-02-02T23:37:36.96",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 76,
+      "fromStreamerId": 2,
+      "toStreamerId": 72,
+      "lastRaided": "2022-02-02T23:37:40.423",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 77,
+      "fromStreamerId": 2,
+      "toStreamerId": 73,
+      "lastRaided": "2022-02-02T23:37:43.987",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 78,
+      "fromStreamerId": 2,
+      "toStreamerId": 74,
+      "lastRaided": "2022-02-02T23:37:47.577",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 79,
+      "fromStreamerId": 2,
+      "toStreamerId": 75,
+      "lastRaided": "2022-02-25T16:38:05.67",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 80,
+      "fromStreamerId": 2,
+      "toStreamerId": 76,
+      "lastRaided": "2022-02-02T23:37:55.95",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 81,
+      "fromStreamerId": 2,
+      "toStreamerId": 77,
+      "lastRaided": "2022-03-01T12:35:02.457",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 82,
+      "fromStreamerId": 2,
+      "toStreamerId": 78,
+      "lastRaided": "2022-02-02T23:38:03.267",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 83,
+      "fromStreamerId": 2,
+      "toStreamerId": 79,
+      "lastRaided": "2022-02-02T23:38:07.137",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 84,
+      "fromStreamerId": 2,
+      "toStreamerId": 80,
+      "lastRaided": "2022-02-02T23:38:11.64",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 85,
+      "fromStreamerId": 2,
+      "toStreamerId": 81,
+      "lastRaided": "2022-02-02T23:38:15.55",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 86,
+      "fromStreamerId": 2,
+      "toStreamerId": 82,
+      "lastRaided": "2022-02-02T23:38:18.693",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 87,
+      "fromStreamerId": 2,
+      "toStreamerId": 83,
+      "lastRaided": "2022-02-02T23:38:22.03",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 88,
+      "fromStreamerId": 2,
+      "toStreamerId": 84,
+      "lastRaided": "2022-04-12T10:04:22.603",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 89,
+      "fromStreamerId": 2,
+      "toStreamerId": 85,
+      "lastRaided": "2022-02-02T23:38:29.787",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 90,
+      "fromStreamerId": 2,
+      "toStreamerId": 86,
+      "lastRaided": "2022-02-02T23:38:33.193",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 91,
+      "fromStreamerId": 2,
+      "toStreamerId": 87,
+      "lastRaided": "2022-02-02T23:38:36.793",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 92,
+      "fromStreamerId": 2,
+      "toStreamerId": 88,
+      "lastRaided": "2022-02-02T23:38:41.04",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 93,
+      "fromStreamerId": 3,
+      "toStreamerId": 34,
+      "lastRaided": "2022-02-04T21:47:40.89",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 95,
+      "fromStreamerId": 3,
+      "toStreamerId": 73,
+      "lastRaided": "2022-02-05T06:54:28.883",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 96,
+      "fromStreamerId": 3,
+      "toStreamerId": 47,
+      "lastRaided": "2022-02-05T06:55:42.84",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 97,
+      "fromStreamerId": 3,
+      "toStreamerId": 84,
+      "lastRaided": "2022-03-28T16:37:17.57",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 98,
+      "fromStreamerId": 3,
+      "toStreamerId": 50,
+      "lastRaided": "2022-02-05T06:56:14.457",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 99,
+      "fromStreamerId": 3,
+      "toStreamerId": 75,
+      "lastRaided": "2022-04-06T17:11:07.017",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 100,
+      "fromStreamerId": 3,
+      "toStreamerId": 41,
+      "lastRaided": "2022-02-23T14:33:19.69",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 101,
+      "fromStreamerId": 3,
+      "toStreamerId": 48,
+      "lastRaided": "2022-02-05T06:56:53.02",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 102,
+      "fromStreamerId": 3,
+      "toStreamerId": 69,
+      "lastRaided": "2022-02-05T06:57:04.297",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 103,
+      "fromStreamerId": 3,
+      "toStreamerId": 82,
+      "lastRaided": "2022-02-05T06:57:16.827",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 104,
+      "fromStreamerId": 3,
+      "toStreamerId": 77,
+      "lastRaided": "2022-03-30T05:11:25.317",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 105,
+      "fromStreamerId": 3,
+      "toStreamerId": 68,
+      "lastRaided": "2022-02-07T05:48:27.133",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 106,
+      "fromStreamerId": 3,
+      "toStreamerId": 88,
+      "lastRaided": "2022-02-05T07:01:21.733",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 107,
+      "fromStreamerId": 3,
+      "toStreamerId": 60,
+      "lastRaided": "2022-04-13T13:43:56.163",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 108,
+      "fromStreamerId": 3,
+      "toStreamerId": 55,
+      "lastRaided": "2022-02-05T07:02:00.263",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 109,
+      "fromStreamerId": 3,
+      "toStreamerId": 53,
+      "lastRaided": "2022-02-05T07:05:06.23",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 110,
+      "fromStreamerId": 3,
+      "toStreamerId": 2,
+      "lastRaided": "2022-02-05T07:05:16.187",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 111,
+      "fromStreamerId": 3,
+      "toStreamerId": 86,
+      "lastRaided": "2022-02-16T16:36:37.49",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 112,
+      "fromStreamerId": 3,
+      "toStreamerId": 70,
+      "lastRaided": "2022-02-05T07:06:09.177",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 113,
+      "fromStreamerId": 2,
+      "toStreamerId": 89,
+      "lastRaided": "2022-03-26T09:02:20.17",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 114,
+      "fromStreamerId": 3,
+      "toStreamerId": 89,
+      "lastRaided": "2022-02-05T07:17:14.433",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 115,
+      "fromStreamerId": 2,
+      "toStreamerId": 90,
+      "lastRaided": "2022-04-05T12:27:00.387",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 116,
+      "fromStreamerId": 3,
+      "toStreamerId": 90,
+      "lastRaided": "2022-04-11T16:32:59.28",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 117,
+      "fromStreamerId": 3,
+      "toStreamerId": 91,
+      "lastRaided": "2022-02-05T07:17:40.73",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 118,
+      "fromStreamerId": 2,
+      "toStreamerId": 92,
+      "lastRaided": "2022-02-05T07:17:50.37",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 119,
+      "fromStreamerId": 3,
+      "toStreamerId": 92,
+      "lastRaided": "2022-03-20T18:31:22.777",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 120,
+      "fromStreamerId": 3,
+      "toStreamerId": 93,
+      "lastRaided": "2022-02-05T07:18:16.393",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 121,
+      "fromStreamerId": 2,
+      "toStreamerId": 94,
+      "lastRaided": "2022-02-05T07:18:23.803",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 122,
+      "fromStreamerId": 3,
+      "toStreamerId": 94,
+      "lastRaided": "2022-02-05T07:18:27.71",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 123,
+      "fromStreamerId": 2,
+      "toStreamerId": 95,
+      "lastRaided": "2022-02-05T07:18:39.34",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 124,
+      "fromStreamerId": 3,
+      "toStreamerId": 95,
+      "lastRaided": "2022-02-05T07:18:42.643",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 125,
+      "fromStreamerId": 2,
+      "toStreamerId": 96,
+      "lastRaided": "2022-04-09T10:20:53.73",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 126,
+      "fromStreamerId": 3,
+      "toStreamerId": 96,
+      "lastRaided": "2022-02-05T07:19:08.07",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 127,
+      "fromStreamerId": 3,
+      "toStreamerId": 97,
+      "lastRaided": "2022-02-07T18:27:12.337",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 128,
+      "fromStreamerId": 3,
+      "toStreamerId": 98,
+      "lastRaided": "2022-03-16T19:45:17.78",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 129,
+      "fromStreamerId": 3,
+      "toStreamerId": 102,
+      "lastRaided": "2022-02-23T10:31:18.01",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 130,
+      "fromStreamerId": 3,
+      "toStreamerId": 103,
+      "lastRaided": "2022-02-24T17:44:24.77",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 131,
+      "fromStreamerId": 3,
+      "toStreamerId": 104,
+      "lastRaided": "2022-03-21T15:05:57.603",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 132,
+      "fromStreamerId": 3,
+      "toStreamerId": 106,
+      "lastRaided": "2022-03-27T16:22:45.917",
+      "allowShowingSocialMedia": true
+    },
+    {
+      "raidListId": 133,
+      "fromStreamerId": 3,
+      "toStreamerId": 114,
+      "lastRaided": "2022-03-27T15:44:14.367",
+      "allowShowingSocialMedia": false
+    }
+  ]

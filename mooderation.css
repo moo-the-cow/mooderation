@@ -214,8 +214,16 @@ html {
 	background-color: #ce8805;
 	color: #000;
 }
-.raiduser {
+.isVIP {
+	background-color: #ff06b4;
+	color: #000;
+}
+.streamer {
 	background-color: #00b7ff;
+	color: #000;
+}
+.raiduser {
+	background-color: #00ffff;
 	color: #000;
 }
 .isMod {

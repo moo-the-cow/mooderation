@@ -2,6 +2,7 @@
 const dataVersion = 6;
 const client_id = "5dsbemnclyj3cigfl2wsgxnnmcevuu";
 /* Temporary objects stored in global variables */
+var tempStreamerAppearedList = [];
 var tempUserList = {};
 var tempUserDetail = {};
 /* Other Variables */
@@ -16,6 +17,7 @@ var badusers = localStorage.getItem("badusers") == null ?  { list: [] } : JSON.p
 /* JSON */
 var env = { data: { debug: false } };
 var raidlist = { list: [] };
+var streamerdblist = { list: [] };
 var excludemodwhisper = { list: [] };
 var languagecountries = { list: [] };
 /* METHODS */
@@ -37,14 +39,16 @@ const filterItems = (arr, query) => {
 const chatMessageHtml = (chatObject) => {
 	var warnClass = (chatObject.warning) ? " warn" : "";
 	var raiduserClass = (chatObject.isRaidListUser) ? " raiduser" : "";
+	var isStreamerClass = (chatObject.isStreamer) ? " streamer" : "";
 	var isModClass = chatObject.isModerator ? " isMod" : "";
+	var isVIPClass = chatObject.isVIP ? " isVIP" : "";
 	var isSubscriberClass = chatObject.isSubscriber ? " isSubscriber" : "";
 	var occurances = "";
 	if (chatObject.occurances > 0)
 	{
 		occurances = `<span class="occurances">(${chatObject.occurances})</span>`
 	}
-	var result = `<div class="message${warnClass}${raiduserClass}${isModClass}${isSubscriberClass}">${(new Date(chatObject.timestamp)).toLocaleString(defaultLocale, {timeZoneName: "short"})} | <a class="user" href="#" data-userid="${chatObject.userId}">${chatObject.userDisplayName}</a> (${chatObject.userId}): ${chatObject.message}${occurances}</div><br/>`;
+	var result = `<div class="message${warnClass}${raiduserClass}${isStreamerClass}${isModClass}${isVIPClass}${isSubscriberClass}">${(new Date(chatObject.timestamp)).toLocaleString(defaultLocale, {timeZoneName: "short"})} | <a class="user" href="#" data-userid="${chatObject.userId}">${chatObject.userDisplayName}</a> (${chatObject.userId}): ${chatObject.message}${occurances}</div><br/>`;
 	if(!chatObject.deleted)
 	{
 		result = `<button class="delete" data-deleteid="${chatObject.id}">Delete</button>${result}`;
@@ -184,7 +188,7 @@ if(isConfigSet())
 	defaultStreamer = config.channel;
 }
 $(function() {
-	var streamerList = ["kaarujp","illairl"];
+	var streamerList = ["kaarujp","nicocoyukari"];
 	streamerList.forEach(function(item) {
 		var selectedFlag = "";
 		if(isConfigSet() && defaultStreamer == item)
@@ -206,7 +210,7 @@ else
 		$("#chatwindow").append(chatMessageHtml(item));
 	});
 }
-var envJsonSource = "env.json";
+var envJsonSource = "env.dev.json";
 var envJsonRequest = $.getJSON(envJsonSource, function(envdata) {
 	env = { version: dataVersion, data: envdata };
 
@@ -220,6 +224,10 @@ var envJsonRequest = $.getJSON(envJsonSource, function(envdata) {
 	var raidlistJsonSource = `${env.data.raidListUrl}`;
 	$.getJSON(raidlistJsonSource, function(raidlistdata) {
 		raidlist = { version: dataVersion, list: raidlistdata };
+	});
+	var streamerlistJsonSource = `${env.data.streamerListUrl}`;
+	$.getJSON(streamerlistJsonSource, function(streamerlistdata) {
+		streamerdblist = { version: dataVersion, list: streamerlistdata };
 	});
 	var languageCountriesJsonSource = `${env.data.languageCountryUrl}`;
 	$.getJSON(languageCountriesJsonSource, function(data) {
@@ -276,7 +284,7 @@ var modWarningSent = false;
 function websocketConnect() {
 	//TODO https://dev.twitch.tv/docs/pubsub
 	//AUTH geht via TOPICS und PING PONG
-	
+	/*
 	twitchPubSubWebsocket = new WebSocket("wss://pubsub-edge.twitch.tv");
 	twitchPubSubWebsocket.onopen = event => {
 		if(env.data.debug) { console.log(event); }
@@ -321,6 +329,7 @@ function websocketConnect() {
 			}
 		}
 	};
+	*/
 	
 	twitchWebsocket = new WebSocket("wss://irc-ws-r.chat.twitch.tv");
 
@@ -425,19 +434,27 @@ function websocketConnect() {
 			let chatTimestamp = (typeof jsonData["tmi-sent-ts"] !== "undefined") ? parseFloat(jsonData["tmi-sent-ts"]) : Date.now();
 			let isMod = jsonData["mod"] !== "undefined" && jsonData["mod"] == "1" ? true : false;
 			let isSubsriber = jsonData["subscriber"] !== "undefined" && jsonData["subscriber"] == "1" ? true : false;
-			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"], userId: parseFloat(jsonData["user-id"]), isModerator: isMod, isRaidListUser: false, isSubscriber: isSubsriber, message: rawMessage, occurances: 0 };
-			//raidlistItem = raidlist.list.filter(f => f.userId == jsonData["user-id"]);
-			raidlist.list.forEach(function(item) {
-				if(item.userId.includes(jsonData["user-id"]))
-				{
-					chatObject.isRaidListUser = true;
-				}
-			});
+			let isVIP = jsonData["badges"] !== "undefined" && jsonData["badges"].includes("vip") ? true : false;
+			let foundStreamer = streamerdblist.list.find(({streamerTwitchId}) => parseFloat(streamerTwitchId) == parseFloat(jsonData["user-id"]))
+			let isStreamer = (typeof foundStreamer !== "undefined") ? true : false;
+			if(isStreamer && !tempStreamerAppearedList.includes(jsonData["user-id"]) && jsonData["user-id"] != 129043031 && jsonData["user-id"] != 587687323 && jsonData["user-id"] != 40164087) //the id is mine then nicole and then kaaru
+			{
+				new Notification("Streamer is posting!", {body: "Some streamer is posting something - attention!", vibrate: [200, 100, 200]});
+				notificationAudio.play();
+				tempStreamerAppearedList.push(jsonData["user-id"]);
+			}
+			//TODO: implement new raidlist
+			//let isRaidListUser = (streamerdblist.list.find(({userId}) => parseFloat(userId) === parseFloat(jsonData["user-id"])).userId !== "undefined") ? true : false;
+			let isRaidListUser = false;
+			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"], userId: parseFloat(jsonData["user-id"]), isModerator: isMod, isRaidListUser: isRaidListUser, isSubscriber: isSubsriber, isStreamer: isStreamer, isVIP: isVIP, message: rawMessage, occurances: 0 };
 			chatObject.occurances = countOccurrences(Array.from(chatlog.list, x => x.userId + x.message), chatObject.userId + chatObject.message);
 
-			$("#chatwindow").append(chatMessageHtml(chatObject));
-			chatlog.list.push(chatObject);
-			localStorage.setItem("chattext", JSON.stringify(chatlog));
+			if(!chatlog.list.find( ({ id }) => id === jsonData["id"]))
+			{
+				$("#chatwindow").append(chatMessageHtml(chatObject)); // hmm maybe here is the issue with dupes, because append chatwindow is used multiple times?
+				chatlog.list.push(chatObject);
+				localStorage.setItem("chattext", JSON.stringify(chatlog));
+			}
 			$(window).trigger("chatscroll");
 		}
 		else
@@ -730,6 +747,7 @@ $("body").on("click", ".user", function(event){
 	//TODO need to check users in channel and get their type if they're bannable or not - not critical because you cannot do that backend side anyways
 	var userid = $(event.currentTarget).attr("data-userid");
 	var username = $(event.currentTarget).attr("data-username");
+	//var parentClass = $(event.currentTarget).parent().attr("class");
 	$("#useroverlay").fadeIn("slow");
 	$("#userpopup").fadeIn("slow", function() {
 		var xhr = new XMLHttpRequest();
@@ -761,7 +779,7 @@ $("body").on("click", ".user", function(event){
 				$("#profile p", this).append(`Created at: ${(new Date(userData[0].created_at)).toLocaleString(defaultLocale, {timeZoneName: "short"})}<br/>`);
 			}
 			if(username != config.username) {
-				$("#profileactions", this).html(`<button id="usertimeout" class="danger" data-userid="${userid}" data-username="${username}">timeout</button><button id="userban" class="danger" data-userid="${userid}" data-username="${username}">ban</button><button id="useruntimeout" data-userid="${userid}" data-username="${username}">untimeout</button><button id="userunban" data-userid="${userid}" data-username="${username}">unban</button>`);
+				$("#profileactions", this).html(`<button id="shoutout" data-userid="${userid}" data-username="${username}">Shoutout</button><button id="usertimeout" class="danger" data-userid="${userid}" data-username="${username}">timeout</button><button id="userban" class="danger" data-userid="${userid}" data-username="${username}">ban</button><button id="useruntimeout" data-userid="${userid}" data-username="${username}">untimeout</button><button id="userunban" data-userid="${userid}" data-username="${username}">unban</button>`);
 				$("#profileactions", this).append(`<input id="userwhisper" type="text" placeholder="Send whisper to User ${username}" data-userid="${userid}" data-username="${username}" />`);
 			}
 			tempUserDetail = userData;
@@ -915,6 +933,10 @@ $("#userpopup").on("click", "#userban", function(event){
 $("#userpopup").on("click", "#useruntimeout", function(event){
 	var username = $(this).attr("data-username");
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :.untimeout ${username}`);
+});
+$("#userpopup").on("click", "#shoutout", function(event){
+	var username = $(this).attr("data-username");
+	twitchWebsocket.send(`PRIVMSG #${config.channel} :!so ${username}`);
 });
 $("#userpopup").on("click", "#userunban", function(event){
 	var username = $(this).attr("data-username");

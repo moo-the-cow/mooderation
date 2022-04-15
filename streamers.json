@@ -1,0 +1,807 @@
+[
+  {
+    "streamerId": 1,
+    "streamerTwitchLogin": "illairl",
+    "streamerTwitchId": "225025135",
+    "streamerTwitchDisplayName": "illaIRL",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 2,
+    "streamerTwitchLogin": "kaarujp",
+    "streamerTwitchId": "40164087",
+    "streamerTwitchDisplayName": "KaaruJP",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 3,
+    "streamerTwitchLogin": "nicocoyukari",
+    "streamerTwitchId": "587687323",
+    "streamerTwitchDisplayName": "NicocoYukari",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 4,
+    "streamerTwitchLogin": "robcdee",
+    "streamerTwitchId": "169185650",
+    "streamerTwitchDisplayName": "robcdee",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 5,
+    "streamerTwitchLogin": "yunicorn19",
+    "streamerTwitchId": "130727794",
+    "streamerTwitchDisplayName": "Yunicorn19",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 6,
+    "streamerTwitchLogin": "exbc",
+    "streamerTwitchId": "67852884",
+    "streamerTwitchDisplayName": "EXBC",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 7,
+    "streamerTwitchLogin": "awkwards_travel",
+    "streamerTwitchId": "142797941",
+    "streamerTwitchDisplayName": "Awkwards_Travel",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 8,
+    "streamerTwitchLogin": "charming_jo",
+    "streamerTwitchId": "134433708",
+    "streamerTwitchDisplayName": "Charming_Jo",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 9,
+    "streamerTwitchLogin": "justketh",
+    "streamerTwitchId": "270232021",
+    "streamerTwitchDisplayName": "justketh",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 10,
+    "streamerTwitchLogin": "ppim",
+    "streamerTwitchId": "400613002",
+    "streamerTwitchDisplayName": "ppim",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 11,
+    "streamerTwitchLogin": "sandy_pastagirl",
+    "streamerTwitchId": "464213413",
+    "streamerTwitchDisplayName": "샌디앤킴",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 12,
+    "streamerTwitchLogin": "g_lilmonstar",
+    "streamerTwitchId": "219529719",
+    "streamerTwitchDisplayName": "g_lilmonstar",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 13,
+    "streamerTwitchLogin": "eric_abroad",
+    "streamerTwitchId": "177428709",
+    "streamerTwitchDisplayName": "Eric_Abroad",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 14,
+    "streamerTwitchLogin": "qrooks",
+    "streamerTwitchId": "176648991",
+    "streamerTwitchDisplayName": "QrooKs",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 15,
+    "streamerTwitchLogin": "cooksux",
+    "streamerTwitchId": "59016177",
+    "streamerTwitchDisplayName": "CookSux",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 16,
+    "streamerTwitchLogin": "dantheliontv",
+    "streamerTwitchId": "558769154",
+    "streamerTwitchDisplayName": "DanTheLionTV",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 17,
+    "streamerTwitchLogin": "redbeard",
+    "streamerTwitchId": "111589942",
+    "streamerTwitchDisplayName": "RedBeard",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 18,
+    "streamerTwitchLogin": "nohaileeno",
+    "streamerTwitchId": "107741643",
+    "streamerTwitchDisplayName": "NoHaileeNo",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 19,
+    "streamerTwitchLogin": "sorabbang629",
+    "streamerTwitchId": "147539451",
+    "streamerTwitchDisplayName": "소라___",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 20,
+    "streamerTwitchLogin": "tyongeee",
+    "streamerTwitchId": "432065909",
+    "streamerTwitchDisplayName": "tyongeee",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 21,
+    "streamerTwitchLogin": "tracy_haoma",
+    "streamerTwitchId": "171515604",
+    "streamerTwitchDisplayName": "tracy_haoma",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 22,
+    "streamerTwitchLogin": "jumpy_jinny",
+    "streamerTwitchId": "152723467",
+    "streamerTwitchDisplayName": "점피지니",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 23,
+    "streamerTwitchLogin": "beddle",
+    "streamerTwitchId": "465987079",
+    "streamerTwitchDisplayName": "Beddle",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 24,
+    "streamerTwitchLogin": "shaylajennings",
+    "streamerTwitchId": "103727078",
+    "streamerTwitchDisplayName": "ShaylaJennings",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 25,
+    "streamerTwitchLogin": "rekstizzy",
+    "streamerTwitchId": "141916172",
+    "streamerTwitchDisplayName": "rekstizzy",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 26,
+    "streamerTwitchLogin": "kkyumingming",
+    "streamerTwitchId": "421905773",
+    "streamerTwitchDisplayName": "뀨밍밍",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 27,
+    "streamerTwitchLogin": "yummy_2",
+    "streamerTwitchId": "407816061",
+    "streamerTwitchDisplayName": "저뉸쓰_",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 28,
+    "streamerTwitchLogin": "waterlynn",
+    "streamerTwitchId": "234973404",
+    "streamerTwitchDisplayName": "waterlynn",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 29,
+    "streamerTwitchLogin": "nezst",
+    "streamerTwitchId": "107159969",
+    "streamerTwitchDisplayName": "nezst",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 30,
+    "streamerTwitchLogin": "mochi_bunnys2",
+    "streamerTwitchId": "523037144",
+    "streamerTwitchDisplayName": "Mochi_BunnyS2",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 31,
+    "streamerTwitchLogin": "nekaria",
+    "streamerTwitchId": "70264584",
+    "streamerTwitchDisplayName": "Nekaria",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 32,
+    "streamerTwitchLogin": "iriskymm",
+    "streamerTwitchId": "188430219",
+    "streamerTwitchDisplayName": "IrisKymm",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 33,
+    "streamerTwitchLogin": "deathsie",
+    "streamerTwitchId": "100544756",
+    "streamerTwitchDisplayName": "DEATHSIE",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 34,
+    "streamerTwitchLogin": "m_o_o_",
+    "streamerTwitchId": "129043031",
+    "streamerTwitchDisplayName": "M_o_o_",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 35,
+    "streamerTwitchLogin": "joeykaotyk",
+    "streamerTwitchId": "76020989",
+    "streamerTwitchDisplayName": "JOEYKAOTYK",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 36,
+    "streamerTwitchLogin": "intheskymaria",
+    "streamerTwitchId": "144198370",
+    "streamerTwitchDisplayName": "intheskymaria",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 37,
+    "streamerTwitchLogin": "kuri",
+    "streamerTwitchId": "40785540",
+    "streamerTwitchDisplayName": "Kuri",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 38,
+    "streamerTwitchLogin": "cashmeow",
+    "streamerTwitchId": "152429316",
+    "streamerTwitchDisplayName": "cashmeow",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 39,
+    "streamerTwitchLogin": "anniemanny",
+    "streamerTwitchId": "627684031",
+    "streamerTwitchDisplayName": "anniemanny",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 40,
+    "streamerTwitchLogin": "crazy_japanese",
+    "streamerTwitchId": "510473442",
+    "streamerTwitchDisplayName": "crazy_japanese",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 41,
+    "streamerTwitchLogin": "itsgaijira",
+    "streamerTwitchId": "20873211",
+    "streamerTwitchDisplayName": "ItsGaijira",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 42,
+    "streamerTwitchLogin": "nickyliner999",
+    "streamerTwitchId": "119944342",
+    "streamerTwitchDisplayName": "Nickyliner999",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 43,
+    "streamerTwitchLogin": "cosmic_rabbit",
+    "streamerTwitchId": "157207647",
+    "streamerTwitchDisplayName": "Cosmic_Rabbit",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 44,
+    "streamerTwitchLogin": "kanagang",
+    "streamerTwitchId": "485226784",
+    "streamerTwitchDisplayName": "KanaGang",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 45,
+    "streamerTwitchLogin": "shurikento",
+    "streamerTwitchId": "518488548",
+    "streamerTwitchDisplayName": "ShuriKento",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 46,
+    "streamerTwitchLogin": "sushipotato",
+    "streamerTwitchId": "514429158",
+    "streamerTwitchDisplayName": "sushipotato",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 47,
+    "streamerTwitchLogin": "japandyjones",
+    "streamerTwitchId": "400156072",
+    "streamerTwitchDisplayName": "JapandyJones",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 48,
+    "streamerTwitchLogin": "pelleyj",
+    "streamerTwitchId": "64256865",
+    "streamerTwitchDisplayName": "PelleyJ",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 49,
+    "streamerTwitchLogin": "ruuna_chu",
+    "streamerTwitchId": "617600418",
+    "streamerTwitchDisplayName": "ruuna_chu",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 50,
+    "streamerTwitchLogin": "milkypuff",
+    "streamerTwitchId": "105168040",
+    "streamerTwitchDisplayName": "milkypuff",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 51,
+    "streamerTwitchLogin": "4amlaundry",
+    "streamerTwitchId": "40529817",
+    "streamerTwitchDisplayName": "4amlaundry",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 52,
+    "streamerTwitchLogin": "annabeezyy",
+    "streamerTwitchId": "549564765",
+    "streamerTwitchDisplayName": "annabeezyy",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 53,
+    "streamerTwitchLogin": "archjp",
+    "streamerTwitchId": "36782974",
+    "streamerTwitchDisplayName": "ArchJP",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 54,
+    "streamerTwitchLogin": "relit",
+    "streamerTwitchId": "26505972",
+    "streamerTwitchDisplayName": "relit",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 55,
+    "streamerTwitchLogin": "bottlehead",
+    "streamerTwitchId": "452160901",
+    "streamerTwitchDisplayName": "bottlehead",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 56,
+    "streamerTwitchLogin": "yui_umechan",
+    "streamerTwitchId": "613684108",
+    "streamerTwitchDisplayName": "yui_umechan",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 57,
+    "streamerTwitchLogin": "lukethenuke95",
+    "streamerTwitchId": "59632045",
+    "streamerTwitchDisplayName": "lukethenuke95",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 58,
+    "streamerTwitchLogin": "maninjapan",
+    "streamerTwitchId": "166905587",
+    "streamerTwitchDisplayName": "maninjapan",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 59,
+    "streamerTwitchLogin": "cosmic_rabbit",
+    "streamerTwitchId": "157207647",
+    "streamerTwitchDisplayName": "cosmic_rabbit",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 60,
+    "streamerTwitchLogin": "nomadicgaijin",
+    "streamerTwitchId": "673478143",
+    "streamerTwitchDisplayName": "NomadicGaijin",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 61,
+    "streamerTwitchLogin": "arijapan",
+    "streamerTwitchId": "208706512",
+    "streamerTwitchDisplayName": "arijapan",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 62,
+    "streamerTwitchLogin": "kr0wslive",
+    "streamerTwitchId": "409662755",
+    "streamerTwitchDisplayName": "Kr0wslive",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 63,
+    "streamerTwitchLogin": "supersonic540",
+    "streamerTwitchId": "27793112",
+    "streamerTwitchDisplayName": "Supersonic540",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 64,
+    "streamerTwitchLogin": "elliegato",
+    "streamerTwitchId": "438548697",
+    "streamerTwitchDisplayName": "elliegato",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 65,
+    "streamerTwitchLogin": "reydempto",
+    "streamerTwitchId": "450163015",
+    "streamerTwitchDisplayName": "Reydempto",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 66,
+    "streamerTwitchLogin": "zep_aki",
+    "streamerTwitchId": "138539689",
+    "streamerTwitchDisplayName": "zep_aki",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 67,
+    "streamerTwitchLogin": "bubbly_live",
+    "streamerTwitchId": "57763548",
+    "streamerTwitchDisplayName": "bubbly_live",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 68,
+    "streamerTwitchLogin": "cybersteffie",
+    "streamerTwitchId": "107520054",
+    "streamerTwitchDisplayName": "cybersteffie",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 69,
+    "streamerTwitchLogin": "sashimiyata",
+    "streamerTwitchId": "85583003",
+    "streamerTwitchDisplayName": "sashimiyata",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 70,
+    "streamerTwitchLogin": "liliisama",
+    "streamerTwitchId": "650339780",
+    "streamerTwitchDisplayName": "LiliiSama",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 71,
+    "streamerTwitchLogin": "miki_tokyo",
+    "streamerTwitchId": "663748797",
+    "streamerTwitchDisplayName": "miki_tokyo",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 72,
+    "streamerTwitchLogin": "songrensei",
+    "streamerTwitchId": "40109124",
+    "streamerTwitchDisplayName": "SongRensei",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 73,
+    "streamerTwitchLogin": "retrogaijin",
+    "streamerTwitchId": "70795534",
+    "streamerTwitchDisplayName": "RetroGaijin",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 74,
+    "streamerTwitchLogin": "slipstreamjc",
+    "streamerTwitchId": "51428267",
+    "streamerTwitchDisplayName": "SlipstreamJC",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 75,
+    "streamerTwitchLogin": "canninyart",
+    "streamerTwitchId": "196211954",
+    "streamerTwitchDisplayName": "CanninyArt",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 76,
+    "streamerTwitchLogin": "kesshin",
+    "streamerTwitchId": "31873092",
+    "streamerTwitchDisplayName": "Kesshin",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 77,
+    "streamerTwitchLogin": "gogoborgor",
+    "streamerTwitchId": "611416217",
+    "streamerTwitchDisplayName": "GoGoBorgor",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 78,
+    "streamerTwitchLogin": "strawberry_butts",
+    "streamerTwitchId": "95190957",
+    "streamerTwitchDisplayName": "strawberry_butts",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 79,
+    "streamerTwitchLogin": "jakenbakelive",
+    "streamerTwitchId": "11249217",
+    "streamerTwitchDisplayName": "jakenbakeLIVE",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 80,
+    "streamerTwitchLogin": "barmike82",
+    "streamerTwitchId": "699887205",
+    "streamerTwitchDisplayName": "barmike82",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 81,
+    "streamerTwitchLogin": "starbitzychan",
+    "streamerTwitchId": "181528130",
+    "streamerTwitchDisplayName": "Starbitzychan",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 82,
+    "streamerTwitchLogin": "ramenadventures",
+    "streamerTwitchId": "217641701",
+    "streamerTwitchDisplayName": "RamenAdventures",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 83,
+    "streamerTwitchLogin": "sakura_ko",
+    "streamerTwitchId": "231609464",
+    "streamerTwitchDisplayName": "sakura_ko",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 84,
+    "streamerTwitchLogin": "sukasblood",
+    "streamerTwitchId": "106243037",
+    "streamerTwitchDisplayName": "sukasblood",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 85,
+    "streamerTwitchLogin": "rubsadventures",
+    "streamerTwitchId": "674524229",
+    "streamerTwitchDisplayName": "rubsadventures",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 86,
+    "streamerTwitchLogin": "songalchemy",
+    "streamerTwitchId": "40109124",
+    "streamerTwitchDisplayName": "SongAlchemy",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 87,
+    "streamerTwitchLogin": "tkyosam",
+    "streamerTwitchId": "31088865",
+    "streamerTwitchDisplayName": "Tkyosam",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 88,
+    "streamerTwitchLogin": "oilyoshi",
+    "streamerTwitchId": "79789919",
+    "streamerTwitchDisplayName": "OilYoshi",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 89,
+    "streamerTwitchLogin": "akasan_plays",
+    "streamerTwitchId": "85419245",
+    "streamerTwitchDisplayName": "Akasan_Plays",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 90,
+    "streamerTwitchLogin": "joshinjapan",
+    "streamerTwitchId": "31964252",
+    "streamerTwitchDisplayName": "JoshInJapan",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 91,
+    "streamerTwitchLogin": "kaydizzle04",
+    "streamerTwitchId": "124989986",
+    "streamerTwitchDisplayName": "Kaydizzle04",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 92,
+    "streamerTwitchLogin": "grant",
+    "streamerTwitchId": "30877022",
+    "streamerTwitchDisplayName": "Grant",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 93,
+    "streamerTwitchLogin": "tristangoldtv",
+    "streamerTwitchId": "51747592",
+    "streamerTwitchDisplayName": "TristanGoldTV",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 94,
+    "streamerTwitchLogin": "cathycat_tv",
+    "streamerTwitchId": "257682042",
+    "streamerTwitchDisplayName": "CathyCat_TV",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 95,
+    "streamerTwitchLogin": "italian_in_japan",
+    "streamerTwitchId": "227800620",
+    "streamerTwitchDisplayName": "italian_in_japan",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 96,
+    "streamerTwitchLogin": "arufaplus",
+    "streamerTwitchId": "174577266",
+    "streamerTwitchDisplayName": "ArufaPlus",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 97,
+    "streamerTwitchLogin": "pasutefu",
+    "streamerTwitchId": "655834179",
+    "streamerTwitchDisplayName": "Pasutefu",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 98,
+    "streamerTwitchLogin": "msshadylady",
+    "streamerTwitchId": "621877017",
+    "streamerTwitchDisplayName": "MsShadyLady",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 99,
+    "streamerTwitchLogin": "nizaris777",
+    "streamerTwitchId": "492420989",
+    "streamerTwitchDisplayName": "nizaris777",
+    "blacklisted": true
+  },
+  {
+    "streamerId": 100,
+    "streamerTwitchLogin": "haeppyhour",
+    "streamerTwitchId": "134443525",
+    "streamerTwitchDisplayName": "HaeppyHour",
+    "blacklisted": true
+  },
+  {
+    "streamerId": 101,
+    "streamerTwitchLogin": "theartspad",
+    "streamerTwitchId": "151418417",
+    "streamerTwitchDisplayName": "theartspad",
+    "blacklisted": true
+  },
+  {
+    "streamerId": 102,
+    "streamerTwitchLogin": "3bytri",
+    "streamerTwitchId": "512971478",
+    "streamerTwitchDisplayName": "3byTri",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 103,
+    "streamerTwitchLogin": "4charan",
+    "streamerTwitchId": "687309809",
+    "streamerTwitchDisplayName": "4charan",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 104,
+    "streamerTwitchLogin": "ladyreii",
+    "streamerTwitchId": "608584466",
+    "streamerTwitchDisplayName": "LadyReii",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 105,
+    "streamerTwitchLogin": "string",
+    "streamerTwitchId": "string",
+    "streamerTwitchDisplayName": "string",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 106,
+    "streamerTwitchLogin": "awkventurer",
+    "streamerTwitchId": "237054404",
+    "streamerTwitchDisplayName": "Awkventurer",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 107,
+    "streamerTwitchLogin": "blehbleh01",
+    "streamerTwitchId": "231089543",
+    "streamerTwitchDisplayName": "blehbleh01",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 108,
+    "streamerTwitchLogin": "leslienggg",
+    "streamerTwitchId": "56826835",
+    "streamerTwitchDisplayName": "LeslieNGGG",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 109,
+    "streamerTwitchLogin": "kaomi_japan",
+    "streamerTwitchId": "764427219",
+    "streamerTwitchDisplayName": "KAOMI_japan",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 110,
+    "streamerTwitchLogin": "yagalterry",
+    "streamerTwitchId": "602017463",
+    "streamerTwitchDisplayName": "yagalterry",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 111,
+    "streamerTwitchLogin": "wolfsbanee",
+    "streamerTwitchId": "42853538",
+    "streamerTwitchDisplayName": "Wolfsbanee",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 112,
+    "streamerTwitchLogin": "jin_ow18",
+    "streamerTwitchId": "550617346",
+    "streamerTwitchDisplayName": "jin_ow18",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 113,
+    "streamerTwitchLogin": "tokunation",
+    "streamerTwitchId": "62717286",
+    "streamerTwitchDisplayName": "Tokunation",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 114,
+    "streamerTwitchLogin": "kwantsuu",
+    "streamerTwitchId": "19981693",
+    "streamerTwitchDisplayName": "KWANTSUU",
+    "blacklisted": false
+  },
+  {
+    "streamerId": 115,
+    "streamerTwitchLogin": "482740767",
+    "streamerTwitchId": "hontosugoii",
+    "streamerTwitchDisplayName": "HontoSugoii",
+    "blacklisted": false
+  }
+]
