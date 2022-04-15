@@ -332,6 +332,19 @@ a.user:hover {
 	cursor: pointer;
 	color: #000;
 }
+#videoPlayer {
+    position: fixed;
+    top: 10%;
+    right: 13%;
+    width: 30%;
+    height: 30%;
+    background-color: #000;
+    filter:alpha(opacity=50);
+    -moz-opacity:0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
+    z-index: 10000;
+}
 @media only screen and (max-width :480px){
 	#chatwindow {
 		margin: 19.5rem 0 0 0;

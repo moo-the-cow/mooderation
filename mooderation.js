@@ -221,6 +221,16 @@ var envJsonRequest = $.getJSON(envJsonSource, function(envdata) {
 		$("#modmessage").hide();
 	}
 
+	var options = {
+		width: 720,
+		height: 480,
+		channel: defaultStreamer,
+		// only needed if your site is also embedded on embed.example.com and othersite.example.com
+		parent: env.data.allowedSites
+	};
+	var player = new Twitch.Player("videoPlayer", options);
+	player.setVolume(0.5);
+
 	var raidlistJsonSource = `${env.data.raidListUrl}`;
 	$.getJSON(raidlistJsonSource, function(raidlistdata) {
 		raidlist = { version: dataVersion, list: raidlistdata };
