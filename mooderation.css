@@ -193,7 +193,7 @@ input#chatmessage:focus, input#modmessage:focus {
 }
 #chatwindow {
 	overflow: auto;
-	margin: 8rem 0 0 0rem;
+	margin: 9rem 0 0 0rem;
 }
 div.message {
 	display: inline;
@@ -334,7 +334,7 @@ a.user:hover {
 }
 @media only screen and (max-width :480px){
 	#chatwindow {
-		margin: 62% 0 0 0;
+		margin: 19.5rem 0 0 0;
 	}
 	label {
 		min-width: 10%;

@@ -446,7 +446,7 @@ function websocketConnect() {
 			//TODO: implement new raidlist
 			//let isRaidListUser = (streamerdblist.list.find(({userId}) => parseFloat(userId) === parseFloat(jsonData["user-id"])).userId !== "undefined") ? true : false;
 			let isRaidListUser = false;
-			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"].toLowerCase(), userId: parseFloat(jsonData["user-id"]), isModerator: isMod, isRaidListUser: isRaidListUser, isSubscriber: isSubsriber, isStreamer: isStreamer, isVIP: isVIP, message: rawMessage, occurances: 0 };
+			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"], userId: parseFloat(jsonData["user-id"]), isModerator: isMod, isRaidListUser: isRaidListUser, isSubscriber: isSubsriber, isStreamer: isStreamer, isVIP: isVIP, message: rawMessage, occurances: 0 };
 			chatObject.occurances = countOccurrences(Array.from(chatlog.list, x => x.userId + x.message), chatObject.userId + chatObject.message);
 
 			if(!chatlog.list.find( ({ id }) => id === jsonData["id"]))
@@ -706,7 +706,7 @@ $("#chatmessage").on("keypress", function(event) {
 	if (event.key === "Enter") {
 		let msg = $(this).val();
 		twitchWebsocket.send(`PRIVMSG #${config.channel} :${msg}`);
-		var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username.toLowerCase(), isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: msg, occurances: 0 };
+		var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username, isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: msg, occurances: 0 };
 		chatlog.list.push(chatObject);
 		localStorage.setItem("chattext", JSON.stringify(chatlog));
 		$("#chatwindow").html($("#chatwindow").html() + chatMessageHtml(chatObject));
@@ -725,7 +725,7 @@ $("#modmessage").on("keypress", function(event) {
 			filteredMods.forEach(function(item){
 				twitchWebsocket.send(`PRIVMSG #${config.channel} :.w ${item} (all mods) ${msg}`);
 			});
-			var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username.toLowerCase(), isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: `WHISPERS: (all mods) ${msg}`, occurances: 0 };
+			var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username, isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: `WHISPERS: (all mods) ${msg}`, occurances: 0 };
 			chatlog.list.push(chatObject);
 			localStorage.setItem("chattext", JSON.stringify(chatlog));
 			$("#chatwindow").append(chatMessageHtml(chatObject));
