@@ -222,8 +222,8 @@ var envJsonRequest = $.getJSON(envJsonSource, function(envdata) {
 	}
 
 	var options = {
-		width: 720,
-		height: 480,
+		width: 400,
+		height: 300,
 		channel: defaultStreamer,
 		// only needed if your site is also embedded on embed.example.com and othersite.example.com
 		parent: env.data.allowedSites

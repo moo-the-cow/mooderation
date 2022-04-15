@@ -334,10 +334,10 @@ a.user:hover {
 }
 #videoPlayer {
     position: fixed;
-    top: 10%;
-    right: 13%;
-    width: 30%;
-    height: 30%;
+    top: 8%;
+    right: 0;
+    width: 400;
+    height: 300;
     background-color: #000;
     filter:alpha(opacity=50);
     -moz-opacity:0.5;
