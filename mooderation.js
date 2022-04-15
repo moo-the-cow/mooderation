@@ -961,6 +961,9 @@ $("#illaIRL").on("click", function(event){
 $("#botdefense").on("click", function(event){
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :!botdefense full`);
 });
+$('#videoPlayerToggle').on("click", function(event){
+	$("#videoPlayer iframe").toggle();
+});
 /*
 $("#raidirl").on("click", function(event){
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :!raidirl`);
