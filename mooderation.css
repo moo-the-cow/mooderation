@@ -207,27 +207,27 @@ html {
 	min-height: 100%;
 }
 .warn {
-	background-color: #ff0000;
+	background-color: rgba(255,0,0,0.5);
 	color: #000;
 }
 .isSubscriber {
-	background-color: #ce8805;
+	background-color: rgba(255, 149, 0, 0.5);
 	color: #000;
 }
 .isVIP {
-	background-color: #ff06b4;
+	background-color: rgba(247, 0, 255, 0.5);
 	color: #000;
 }
 .streamer {
-	background-color: #00b7ff;
+	background-color: rgba(0, 238, 255, 0.5);
 	color: #000;
 }
 .raiduser {
-	background-color: #00ffff;
+	background-color: rgba(0, 132, 255, 0.5);
 	color: #000;
 }
 .isMod {
-	background-color: #05ce05;
+	background-color: rgba(60, 255, 0, 0.5);
 	color: #000;
 }
 .occurances {
