@@ -339,7 +339,7 @@ a.user:hover {
     width: 400;
     height: 300;
     background-color: #000;
-    filter:alpha(opacity=50);
+    filter:alpha(opacity=0);
     -moz-opacity:0.5;
     -khtml-opacity: 0.5;
     opacity: 0.5;
@@ -380,5 +380,10 @@ a.user:hover {
 		font-size: unset;
 		padding: 0.5%;
 		min-width: 2%;
+	}
+	#videoPlayer
+	{
+		display: none;
+		visibility: hidden;
 	}
 }
