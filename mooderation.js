@@ -42,13 +42,14 @@ const chatMessageHtml = (chatObject) => {
 	var isStreamerClass = (chatObject.isStreamer) ? " streamer" : "";
 	var isModClass = chatObject.isModerator ? " isMod" : "";
 	var isVIPClass = chatObject.isVIP ? " isVIP" : "";
+	var isSystemClass = chatObject.isSystem ? " isSystem" : "";
 	var isSubscriberClass = chatObject.isSubscriber ? " isSubscriber" : "";
 	var occurances = "";
 	if (chatObject.occurances > 0)
 	{
 		occurances = `<span class="occurances">(${chatObject.occurances})</span>`
 	}
-	var result = `<div class="message${warnClass}${raiduserClass}${isStreamerClass}${isModClass}${isVIPClass}${isSubscriberClass}">${(new Date(chatObject.timestamp)).toLocaleString(defaultLocale, {timeZoneName: "short"})} | <a class="user" href="#" data-userid="${chatObject.userId}">${chatObject.userDisplayName}</a> (${chatObject.userId}): ${chatObject.message}${occurances}</div><br/>`;
+	var result = `<div class="message${warnClass}${raiduserClass}${isStreamerClass}${isModClass}${isVIPClass}${isSubscriberClass}${isSystemClass}">${(new Date(chatObject.timestamp)).toLocaleString(defaultLocale, {timeZoneName: "short"})} | <a class="user" href="#" data-userid="${chatObject.userId}">${chatObject.userDisplayName}</a> (${chatObject.userId}): ${chatObject.message}${occurances}</div><br/>`;
 	if(!chatObject.deleted)
 	{
 		result = `<button class="delete" data-deleteid="${chatObject.id}">Delete</button>${result}`;
@@ -445,7 +446,7 @@ function websocketConnect() {
 			let isMod = jsonData["mod"] !== "undefined" && jsonData["mod"] == "1" ? true : false;
 			let isSubsriber = jsonData["subscriber"] !== "undefined" && jsonData["subscriber"] == "1" ? true : false;
 			let isVIP = jsonData["badges"] !== "undefined" && jsonData["badges"].includes("vip") ? true : false;
-			let foundStreamer = streamerdblist.list.find(({streamerTwitchId}) => parseFloat(streamerTwitchId) == parseFloat(jsonData["user-id"]))
+			let foundStreamer = streamerdblist.list.find(({streamerTwitchId}) => BigInt(streamerTwitchId) == BigInt(jsonData["user-id"]))
 			let isStreamer = (typeof foundStreamer !== "undefined") ? true : false;
 			if(isStreamer && !tempStreamerAppearedList.includes(jsonData["user-id"]) && jsonData["user-id"] != 129043031 && jsonData["user-id"] != 587687323 && jsonData["user-id"] != 40164087) //the id is mine then nicole and then kaaru
 			{
@@ -456,7 +457,21 @@ function websocketConnect() {
 			//TODO: implement new raidlist
 			//let isRaidListUser = (streamerdblist.list.find(({userId}) => parseFloat(userId) === parseFloat(jsonData["user-id"])).userId !== "undefined") ? true : false;
 			let isRaidListUser = false;
-			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"].toLowerCase(), userId: parseFloat(jsonData["user-id"]), isModerator: isMod, isRaidListUser: isRaidListUser, isSubscriber: isSubsriber, isStreamer: isStreamer, isVIP: isVIP, message: rawMessage, occurances: 0 };
+			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"].toLowerCase(), userLogin: "", userId: BigInt(jsonData["user-id"]), isSystem: false, isModerator: isMod, isRaidListUser: isRaidListUser, isSubscriber: isSubsriber, isStreamer: isStreamer, isVIP: isVIP, message: rawMessage, occurances: 0 };
+
+			if(jsonData["msg-id"] !== "undefined" && jsonData["msg-id"] == "subgift")
+			{
+				let gifterId = BigInt(jsonData["user-id"]) // gifter
+				let gifterLogin = jsonData["login"]; //gifter
+				let subMonths = parseInt(jsonData["msg-param-gift-months"]);
+				let recipientLogin = jsonData["msg-param-recipient-user-name"];
+				let recipientId = BigInt(jsonData["msg-param-recipient-id"]);
+				let subTierNumber = parseInt(jsonData["msg-param-sub-plan"]) / 1000;
+				chatObject.userId = gifterId;
+				chatObject.userLogin = gifterLogin;
+				chatObject.rawMessage = `${gifterLogin} subgifted a Tier ${subTierNumber} for ${subMonths} month(s) to ${recipientLogin} (${recipientId})`;
+			}
+
 			chatObject.occurances = countOccurrences(Array.from(chatlog.list, x => x.userId + x.message), chatObject.userId + chatObject.message);
 
 			if(!chatlog.list.find( ({ id }) => id === jsonData["id"]))
@@ -716,7 +731,7 @@ $("#chatmessage").on("keypress", function(event) {
 	if (event.key === "Enter") {
 		let msg = $(this).val();
 		twitchWebsocket.send(`PRIVMSG #${config.channel} :${msg}`);
-		var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username.toLowerCase(), isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: msg, occurances: 0 };
+		var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username.toLowerCase(), userName: "", isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: msg, occurances: 0 };
 		chatlog.list.push(chatObject);
 		localStorage.setItem("chattext", JSON.stringify(chatlog));
 		$("#chatwindow").html($("#chatwindow").html() + chatMessageHtml(chatObject));
@@ -735,7 +750,7 @@ $("#modmessage").on("keypress", function(event) {
 			filteredMods.forEach(function(item){
 				twitchWebsocket.send(`PRIVMSG #${config.channel} :.w ${item} (all mods) ${msg}`);
 			});
-			var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username.toLowerCase(), isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: `WHISPERS: (all mods) ${msg}`, occurances: 0 };
+			var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username.toLowerCase(), userName: "", isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: `WHISPERS: (all mods) ${msg}`, occurances: 0 };
 			chatlog.list.push(chatObject);
 			localStorage.setItem("chattext", JSON.stringify(chatlog));
 			$("#chatwindow").append(chatMessageHtml(chatObject));
