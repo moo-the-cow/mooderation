@@ -472,7 +472,7 @@ function websocketConnect() {
 				chatObject.isSystem = true;
 				chatObject.userId = gifterId;
 				chatObject.userLogin = gifterLogin;
-				chatObject.rawMessage = `${gifterLogin} subgifted a Tier ${subTierNumber} for ${subMonths} month(s) to ${recipientLogin} (${recipientId})`;
+				chatObject.message = `${gifterLogin} subgifted a Tier ${subTierNumber} for ${subMonths} month(s) to ${recipientLogin} (${recipientId})`;
 			}
 			if(jsonData["bits"] !== undefined && jsonData["bits"] != "")
 			{
@@ -485,7 +485,7 @@ function websocketConnect() {
 				chatObject.isSystem = true;
 				chatObject.userId = gifterId;
 				chatObject.userDisplayName = gifterLogin;
-				chatObject.rawMessage = `${gifterLogin} cheered ${bitsAmount} bits: ${userMessage}`;
+				chatObject.message = `${gifterLogin} cheered ${bitsAmount} bits: ${userMessage}`;
 			}
 
 			chatObject.occurances = countOccurrences(Array.from(chatlog.list, x => x.userId + x.message), chatObject.userId + chatObject.message);
