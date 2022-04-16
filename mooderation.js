@@ -467,6 +467,7 @@ function websocketConnect() {
 				let recipientLogin = jsonData["msg-param-recipient-user-name"];
 				let recipientId = BigInt(jsonData["msg-param-recipient-id"]);
 				let subTierNumber = parseInt(jsonData["msg-param-sub-plan"]) / 1000;
+				chatObject.isSystem = true;
 				chatObject.userId = gifterId;
 				chatObject.userLogin = gifterLogin;
 				chatObject.rawMessage = `${gifterLogin} subgifted a Tier ${subTierNumber} for ${subMonths} month(s) to ${recipientLogin} (${recipientId})`;
