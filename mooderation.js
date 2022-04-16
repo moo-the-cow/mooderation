@@ -489,7 +489,7 @@ function websocketConnect() {
 				let gifterId = Number(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["display-name"]; //gifter
 				let bitsAmount = parseInt(jsonData["bits"]);
-				let userMessage = jsonData["user-type"].replace(/^.*PRIVMSG[^:]*:\w*\d* (.*)\\r\\n$/gmiu, "$1");
+				let userMessage = jsonData["user-type"].replace(/^.*PRIVMSG[^:]*:\w*\d* (.*)/gmiu, "$1");
 				chatObject.isSystem = true;
 				chatObject.userId = gifterId;
 				chatObject.userDisplayName = gifterLogin;
@@ -592,9 +592,20 @@ $("#toggleconfig").on("click", function(event){
 $("#search").on("input", function(){
     let filteredList = filterChatItems(chatlog.list, $(this).val());
 	$("#chatwindow").html("");
+	let filterCounter = 0;
 	filteredList.forEach(function(item) {
 		$("#chatwindow").append(chatMessageHtml(item));
+		filterCounter++;
 	});
+	if($(this).val() == "")
+	{
+		$("#filterCounter").hide();
+	}
+	else
+	{
+		$("#filterCounter").text(filterCounter);
+		$("#filterCounter").show();
+	}
 });
 $("#filterusers").on("input", function(){
 	//TODO refactor
