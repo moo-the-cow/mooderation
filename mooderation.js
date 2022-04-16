@@ -472,6 +472,17 @@ function websocketConnect() {
 				chatObject.userLogin = gifterLogin;
 				chatObject.rawMessage = `${gifterLogin} subgifted a Tier ${subTierNumber} for ${subMonths} month(s) to ${recipientLogin} (${recipientId})`;
 			}
+			if(jsonData["msg-id"] !== "undefined" && jsonData["msg-id"] == "subgift")
+			{
+				let gifterId = BigInt(jsonData["user-id"]) // gifter
+				let gifterLogin = jsonData["display-name"]; //gifter
+				let bitsAmount = parseInt(jsonData["bits"]);
+				let userMessage = jsonData["user-type"].replace(/^.*PRIVMSG[^:]*:Cheer\d* (.*)\\r\\n$/gmiu, "$1");
+				chatObject.isSystem = true;
+				chatObject.userId = gifterId;
+				chatObject.userDisplayName = gifterLogin;
+				chatObject.rawMessage = `${gifterLogin} cheered ${bitsAmount} bits: ${userMessage}`;
+			}
 
 			chatObject.occurances = countOccurrences(Array.from(chatlog.list, x => x.userId + x.message), chatObject.userId + chatObject.message);
 
