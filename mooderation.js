@@ -446,7 +446,7 @@ function websocketConnect() {
 			let isMod = jsonData["mod"] !== "undefined" && jsonData["mod"] == "1" ? true : false;
 			let isSubsriber = jsonData["subscriber"] !== "undefined" && jsonData["subscriber"] == "1" ? true : false;
 			let isVIP = jsonData["badges"] !== "undefined" && jsonData["badges"].includes("vip") ? true : false;
-			let foundStreamer = streamerdblist.list.find(({streamerTwitchId}) => BigInt(streamerTwitchId) == BigInt(jsonData["user-id"]))
+			let foundStreamer = streamerdblist.list.find(({streamerTwitchId}) => parseFloat(streamerTwitchId) == parseFloat(jsonData["user-id"]))
 			let isStreamer = (typeof foundStreamer !== "undefined") ? true : false;
 			if(isStreamer && !tempStreamerAppearedList.includes(jsonData["user-id"]) && jsonData["user-id"] != 129043031 && jsonData["user-id"] != 587687323 && jsonData["user-id"] != 40164087) //the id is mine then nicole and then kaaru
 			{
@@ -457,15 +457,15 @@ function websocketConnect() {
 			//TODO: implement new raidlist
 			//let isRaidListUser = (streamerdblist.list.find(({userId}) => parseFloat(userId) === parseFloat(jsonData["user-id"])).userId !== "undefined") ? true : false;
 			let isRaidListUser = false;
-			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"].toLowerCase(), userLogin: "", userId: BigInt(jsonData["user-id"]), isSystem: false, isModerator: isMod, isRaidListUser: isRaidListUser, isSubscriber: isSubsriber, isStreamer: isStreamer, isVIP: isVIP, message: rawMessage, occurances: 0 };
+			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"].toLowerCase(), userLogin: "", userId: parseFloat(jsonData["user-id"]), isSystem: false, isModerator: isMod, isRaidListUser: isRaidListUser, isSubscriber: isSubsriber, isStreamer: isStreamer, isVIP: isVIP, message: rawMessage, occurances: 0 };
 
 			if(jsonData["msg-id"] !== "undefined" && jsonData["msg-id"] == "subgift")
 			{
-				let gifterId = BigInt(jsonData["user-id"]) // gifter
+				let gifterId = parseFloat(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["login"]; //gifter
 				let subMonths = parseInt(jsonData["msg-param-gift-months"]);
 				let recipientLogin = jsonData["msg-param-recipient-user-name"];
-				let recipientId = BigInt(jsonData["msg-param-recipient-id"]);
+				let recipientId = parseFloat(jsonData["msg-param-recipient-id"]);
 				let subTierNumber = parseInt(jsonData["msg-param-sub-plan"]) / 1000;
 				chatObject.isSystem = true;
 				chatObject.userId = gifterId;
@@ -474,7 +474,7 @@ function websocketConnect() {
 			}
 			if(jsonData["msg-id"] !== "undefined" && jsonData["msg-id"] == "subgift")
 			{
-				let gifterId = BigInt(jsonData["user-id"]) // gifter
+				let gifterId = parseFloat(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["display-name"]; //gifter
 				let bitsAmount = parseInt(jsonData["bits"]);
 				let userMessage = jsonData["user-type"].replace(/^.*PRIVMSG[^:]*:Cheer\d* (.*)\\r\\n$/gmiu, "$1");
