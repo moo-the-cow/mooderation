@@ -461,8 +461,6 @@ function websocketConnect() {
 
 			if(jsonData["msg-id"] !== undefined && jsonData["msg-id"] == "subgift")
 			{
-				console.log("mooooooooooooooooooooo");
-				console.log(jsonData["msg-id"]);
 				let gifterId = Number(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["login"]; //gifter
 				let subMonths = parseInt(jsonData["msg-param-gift-months"]);
@@ -476,8 +474,6 @@ function websocketConnect() {
 			}
 			if(jsonData["bits"] !== undefined && jsonData["bits"] != "")
 			{
-				console.log("mooooooooooooooooooooo");
-				console.log(jsonData["bits"]);
 				let gifterId = Number(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["display-name"]; //gifter
 				let bitsAmount = parseInt(jsonData["bits"]);
