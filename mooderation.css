@@ -218,10 +218,6 @@ html {
 	background-color: rgba(247, 0, 255, 0.5);
 	color: #000;
 }
-.isSystem {
-	background-color: rgba(0, 0, 0, 0.5);
-	color: #000;
-}
 .streamer {
 	background-color: rgba(0, 238, 255, 0.5);
 	color: #000;
@@ -232,6 +228,10 @@ html {
 }
 .isMod {
 	background-color: rgba(60, 255, 0, 0.5);
+	color: #000;
+}
+.isSystem {
+	background-color: rgba(0, 0, 0, 0.5);
 	color: #000;
 }
 .occurances {
