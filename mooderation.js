@@ -459,7 +459,7 @@ function websocketConnect() {
 			let isRaidListUser = false;
 			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"].toLowerCase(), userLogin: "", userId: Number(jsonData["user-id"]), isSystem: false, isModerator: isMod, isRaidListUser: isRaidListUser, isSubscriber: isSubsriber, isStreamer: isStreamer, isVIP: isVIP, message: rawMessage, occurances: 0 };
 
-			if(jsonData["msg-id"] !== "undefined" && jsonData["msg-id"] == "subgift")
+			if(jsonData["msg-param-gift-months"] !== "undefined")
 			{
 				let gifterId = Number(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["login"]; //gifter
@@ -472,7 +472,7 @@ function websocketConnect() {
 				chatObject.userLogin = gifterLogin;
 				chatObject.rawMessage = `${gifterLogin} subgifted a Tier ${subTierNumber} for ${subMonths} month(s) to ${recipientLogin} (${recipientId})`;
 			}
-			if(jsonData["msg-id"] !== "undefined" && jsonData["msg-id"] == "subgift")
+			if(jsonData["bits"] !== "undefined")
 			{
 				let gifterId = Number(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["display-name"]; //gifter
