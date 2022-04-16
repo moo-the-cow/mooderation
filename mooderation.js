@@ -443,9 +443,9 @@ function websocketConnect() {
 				});
 			}
 			let chatTimestamp = (typeof jsonData["tmi-sent-ts"] !== "undefined") ? Number(jsonData["tmi-sent-ts"]) : Date.now();
-			let isMod = jsonData["mod"] !== "undefined" && jsonData["mod"] == "1" ? true : false;
-			let isSubsriber = jsonData["subscriber"] !== "undefined" && jsonData["subscriber"] == "1" ? true : false;
-			let isVIP = jsonData["badges"] !== "undefined" && jsonData["badges"].includes("vip") ? true : false;
+			let isMod = jsonData["mod"] !== undefined && jsonData["mod"] == "1" ? true : false;
+			let isSubsriber = jsonData["subscriber"] !== undefined && jsonData["subscriber"] == "1" ? true : false;
+			let isVIP = jsonData["badges"] !== undefined && jsonData["badges"].includes("vip") ? true : false;
 			let foundStreamer = streamerdblist.list.find(({streamerTwitchId}) => Number(streamerTwitchId) == Number(jsonData["user-id"]))
 			let isStreamer = (typeof foundStreamer !== "undefined") ? true : false;
 			if(isStreamer && !tempStreamerAppearedList.includes(jsonData["user-id"]) && jsonData["user-id"] != 129043031 && jsonData["user-id"] != 587687323 && jsonData["user-id"] != 40164087) //the id is mine then nicole and then kaaru
@@ -459,8 +459,10 @@ function websocketConnect() {
 			let isRaidListUser = false;
 			var chatObject = {id: jsonData["id"], deleted: false, warning: warningFound, timestamp: chatTimestamp, userDisplayName: jsonData["display-name"].toLowerCase(), userLogin: "", userId: Number(jsonData["user-id"]), isSystem: false, isModerator: isMod, isRaidListUser: isRaidListUser, isSubscriber: isSubsriber, isStreamer: isStreamer, isVIP: isVIP, message: rawMessage, occurances: 0 };
 
-			if(jsonData["msg-param-gift-months"] !== "undefined" && jsonData["msg-param-gift-months"] != "")
+			if(jsonData["msg-id"] !== undefined && jsonData["msg-id"] == "subgift")
 			{
+				console.log("mooooooooooooooooooooo");
+				console.log(jsonData["msg-id"]);
 				let gifterId = Number(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["login"]; //gifter
 				let subMonths = parseInt(jsonData["msg-param-gift-months"]);
@@ -472,8 +474,10 @@ function websocketConnect() {
 				chatObject.userLogin = gifterLogin;
 				chatObject.rawMessage = `${gifterLogin} subgifted a Tier ${subTierNumber} for ${subMonths} month(s) to ${recipientLogin} (${recipientId})`;
 			}
-			if(jsonData["bits"] !== "undefined" && jsonData["bits"] != "")
+			if(jsonData["bits"] !== undefined && jsonData["bits"] != "")
 			{
+				console.log("mooooooooooooooooooooo");
+				console.log(jsonData["bits"]);
 				let gifterId = Number(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["display-name"]; //gifter
 				let bitsAmount = parseInt(jsonData["bits"]);
