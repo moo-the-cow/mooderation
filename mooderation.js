@@ -489,7 +489,7 @@ function websocketConnect() {
 				let gifterId = Number(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["display-name"]; //gifter
 				let bitsAmount = parseInt(jsonData["bits"]);
-				let userMessage = jsonData["user-type"].replace(/^.*PRIVMSG[^:]*:Cheer\d* (.*)\\r\\n$/gmiu, "$1");
+				let userMessage = jsonData["user-type"].replace(/^.*PRIVMSG[^:]*:\w*\d* (.*)\\r\\n$/gmiu, "$1");
 				chatObject.isSystem = true;
 				chatObject.userId = gifterId;
 				chatObject.userDisplayName = gifterLogin;

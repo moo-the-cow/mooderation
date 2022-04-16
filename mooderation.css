@@ -232,7 +232,7 @@ html {
 }
 .isSystem {
 	background-color: rgba(0, 0, 0, 0.5);
-	color: #000;
+	color: rgb(255, 255, 255);
 }
 .occurances {
 	background-color: #000;
