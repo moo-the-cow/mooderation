@@ -472,7 +472,19 @@ function websocketConnect() {
 				chatObject.userLogin = gifterLogin;
 				chatObject.message = `${gifterLogin} subgifted a Tier ${subTierNumber} for ${subMonths} month(s) to ${recipientLogin} (${recipientId})`;
 			}
-			if(jsonData["bits"] !== undefined && jsonData["bits"] != "")
+			else if(jsonData["msg-id"] !== undefined && jsonData["msg-id"] == "resub")
+			{
+				let gifterId = Number(jsonData["user-id"]) // gifter
+				let gifterLogin = jsonData["login"]; //gifter
+				let subMonths = parseInt(jsonData["msg-param-months"]) == 0 ? 1 : parseInt(jsonData["msg-param-months"]);
+				let subOverallMonths = parseInt(jsonData["msg-param-cumulative-months"])
+				let subTierNumber = parseInt(jsonData["msg-param-sub-plan"]) / 1000;
+				chatObject.isSystem = true;
+				chatObject.userId = gifterId;
+				chatObject.userLogin = gifterLogin;
+				chatObject.message = `resubbed a Tier ${subTierNumber} for ${subMonths} month(s) overall ${subOverallMonths}`;
+			}
+			else if(jsonData["bits"] !== undefined && jsonData["bits"] != "")
 			{
 				let gifterId = Number(jsonData["user-id"]) // gifter
 				let gifterLogin = jsonData["display-name"]; //gifter
