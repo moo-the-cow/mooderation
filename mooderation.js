@@ -277,7 +277,11 @@ $.getJSON(excludemodwhisperJsonSource, function(data) {
 });
 
 Notification.requestPermission().then(function(result) {
-	if(env.data.debug) { console.log(result); }
+	if (result === 'denied') {
+		if(env.data.debug) { console.log("notification permission denied"); }
+	} else if (result === 'granted') {
+		if(env.data.debug) { console.log(result); }
+	}
 });
 $("#configarea").hide();
 // WEBSOCKET
@@ -798,49 +802,48 @@ $("body").on("keypress", "#userwhisper", function(event){
 		$(this).val("");
 	}
 });
-$("body").on("click", ".user", function(event){
-	event.preventDefault();
+$("#chattable").on("click", ".user", function(event){
 	//TODO need to check users in channel and get their type if they're bannable or not - not critical because you cannot do that backend side anyways
 	var userid = $(event.currentTarget).attr("data-userid");
 	var username = $(event.currentTarget).attr("data-username");
 	//var parentClass = $(event.currentTarget).parent().attr("class");
 	$("#useroverlay").fadeIn("slow");
-	$("#userpopup").fadeIn("slow", function() {
-		var xhr = new XMLHttpRequest();
-		if(typeof userid === "undefined" || userid == 0){
-			if(userid == 0) {
-				username = config.username;
-			}
-			xhr = twitchApiXhr(xhr, `https://api.twitch.tv/helix/users?login=${username}`);
+	var xhr = new XMLHttpRequest();
+	if(typeof userid === "undefined" || userid == 0){
+		if(userid == 0) {
+			username = config.username;
 		}
-		else {
-			xhr = twitchApiXhr(xhr, `https://api.twitch.tv/helix/users?id=${userid}`);
+		xhr = twitchApiXhr(xhr, `https://api.twitch.tv/helix/users?login=${username}`);
+	}
+	else {
+		xhr = twitchApiXhr(xhr, `https://api.twitch.tv/helix/users?id=${userid}`);
+	}
+	xhr.send();
+	xhr.onload = () => {
+		let userData = xhr.response.data;
+		console.log(userData);
+		username = userData[0].login;
+		userid = userData[0].id;
+		$("#profile p").html("");
+		$("#profileactions").html("");
+		var userImage = "";
+		if(userData[0].profile_image_url != ""){
+			userImage = `<img src="${userData[0].profile_image_url}" width="50" height="50" />`;
 		}
-		xhr.send();
-		xhr.onload = () => {
-			let userData = xhr.response.data;
-			username = userData[0].login;
-			userid = userData[0].id;
-			$("#profile p", this).html("");
-			$("#profileactions", this).html("");
-			$("#profile h2", this).text(`User: ${userData[0].display_name} (${username}|${userid})`);
-			if(userData[0].profile_image_url != ""){
-				$("#profileimage", this).html(`<img src="${userData[0].profile_image_url}" width="50" height="50" />`);
-			}
-			if(userData[0].description != ""){
-				$("#profile p", this).append(`Description: ${userData[0].description}<br/>`);
-			}
-			$("#profile p", this).append(`Views: ${userData[0].view_count}<br/>`);
-			if(userData[0].created_at != ""){
-				$("#profile p", this).append(`Created at: ${(new Date(userData[0].created_at)).toLocaleString(defaultLocale, {timeZoneName: "short"})}<br/>`);
-			}
-			if(username != config.username) {
-				$("#profileactions", this).html(`<button id="shoutout" data-userid="${userid}" data-username="${username}">Shoutout</button><button id="usertimeout" class="danger" data-userid="${userid}" data-username="${username}">timeout</button><button id="userban" class="danger" data-userid="${userid}" data-username="${username}">ban</button><button id="useruntimeout" data-userid="${userid}" data-username="${username}">untimeout</button><button id="userunban" data-userid="${userid}" data-username="${username}">unban</button>`);
-				$("#profileactions", this).append(`<input id="userwhisper" type="text" placeholder="Send whisper to User ${username}" data-userid="${userid}" data-username="${username}" />`);
-			}
-			tempUserDetail = userData;
+		$("#useroverlay h5").html(`${userImage} ${userData[0].display_name} (${username}|${userid})`);
+		if(userData[0].description != ""){
+			$("#profile p").append(`Description: ${userData[0].description}<br/>`);
 		}
-	});
+		$("#profile p").append(`Views: ${userData[0].view_count}<br/>`);
+		if(userData[0].created_at != ""){
+			$("#profile p").append(`Created at: ${(new Date(userData[0].created_at)).toLocaleString(defaultLocale, {timeZoneName: "short"})}<br/>`);
+		}
+		if(username != config.username) {
+			$("#profileactions").html(`<button id="shoutout" data-userid="${userid}" data-username="${username}">Shoutout</button><button id="usertimeout" class="danger" data-userid="${userid}" data-username="${username}">timeout</button><button id="userban" class="danger" data-userid="${userid}" data-username="${username}">ban</button><button id="useruntimeout" data-userid="${userid}" data-username="${username}">untimeout</button><button id="userunban" data-userid="${userid}" data-username="${username}">unban</button>`);
+			$("#profileactions").append(`<input id="userwhisper" type="text" placeholder="Send whisper to User ${username}" data-userid="${userid}" data-username="${username}" />`);
+		}
+		tempUserDetail = userData;
+	}
 });
 $("#raidirl").on("click", function(event){
 	$.getJSON(`${env.data.getTestUrl}?streamerLoginName=${config.channel}`, function(data) {
@@ -964,6 +967,9 @@ $("#banfilteredusers, #timeoutfilteredusers").on("click", function(event){
 $("#userlistoverlay button.btn-close").on("click", function(event) {
 	$("#userlistoverlay").fadeOut("slow");
 });
+$("#useroverlay button.btn-close").on("click", function(event) {
+	$("#useroverlay").fadeOut("slow");
+});
 /*
 $("#userlistclose, #userlistoverlay").on("click", function(event){
 	$("#userlistoverlay, #userlistpopup").fadeOut("slow");
@@ -977,11 +983,11 @@ $("#userclose, #useroverlay").on("click", function(event){
 $("#clearcommand").on("click", function(event){
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :.clear`);
 });
-$("#userpopup").on("click", "#usertimeout", function(event){
+$("#useroverlay").on("click", "#usertimeout", function(event){
 	var username = $(this).attr("data-username");
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :.timeout ${username}`);
 });
-$("#userpopup").on("click", "#userban", function(event){
+$("#useroverlay").on("click", "#userban", function(event){
 	//if(window.confirm(`Are you sure you want to BAN ${username}?`))
 	{
 		var username = $(this).attr("data-username");
@@ -991,15 +997,15 @@ $("#userpopup").on("click", "#userban", function(event){
 		localStorage.setItem("bannedusers", JSON.stringify(bannedusers));
 	}
 });
-$("#userpopup").on("click", "#useruntimeout", function(event){
+$("#useroverlay").on("click", "#useruntimeout", function(event){
 	var username = $(this).attr("data-username");
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :.untimeout ${username}`);
 });
-$("#userpopup").on("click", "#shoutout", function(event){
+$("#useroverlay").on("click", "#shoutout", function(event){
 	var username = $(this).attr("data-username");
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :!so ${username}`);
 });
-$("#userpopup").on("click", "#userunban", function(event){
+$("#useroverlay").on("click", "#userunban", function(event){
 	var username = $(this).attr("data-username");
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :.unban ${username}`);
 	bannedusers.list = bannedusers.list.filter(f => f.username !== username);
