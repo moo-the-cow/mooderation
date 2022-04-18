@@ -49,12 +49,7 @@ const chatMessageHtml = (chatObject) => {
 	{
 		occurances = `<span class="occurances">(${chatObject.occurances})</span>`
 	}
-	var result = `<div class="message${warnClass}${raiduserClass}${isStreamerClass}${isModClass}${isVIPClass}${isSubscriberClass}${isSystemClass}">${(new Date(chatObject.timestamp)).toLocaleString(defaultLocale, {timeZoneName: "short"})} | <a class="user" href="#" data-userid="${chatObject.userId}">${chatObject.userDisplayName}</a> (${chatObject.userId}): ${chatObject.message}${occurances}</div><br/>`;
-	if(!chatObject.deleted)
-	{
-		result = `<button class="delete" data-deleteid="${chatObject.id}">Delete</button>${result}`;
-	}
-	return result;
+	return `<tr class="message${warnClass}${raiduserClass}${isStreamerClass}${isModClass}${isVIPClass}${isSubscriberClass}${isSystemClass}"><td scope="row">${chatObject.deleted ? '' : '<button type="button" class="delete btn btn-danger" data-deleteid="${chatObject.id}">Delete</button>'}</td><td>${(new Date(chatObject.timestamp)).toLocaleString(defaultLocale)}</td><td><button type="button" class="user btn btn-link" data-userid="${chatObject.userId}">${chatObject.userDisplayName}</button> (${chatObject.userId})</td><td>${chatObject.message}${occurances}</td></tr>`;
 };
 const isConfigSet = () => { return typeof config.channel !== "undefined" && typeof config.username !== "undefined" && typeof config.oauth !== "undefined" && typeof config.languagecountry !== "undefined";};
 const jsonToCsv = (obj) => {
@@ -176,6 +171,7 @@ const notificationAudio = new Audio("audio/notification.mp3");
 //first time visit always jump to the bottom of the chat
 $(function() {
 	document.getElementById("chatwindow").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+	$("#videoPlayerToast > div > small").text(defaultStreamer);
 });
 //INFO: use en-US per default unless configured otherwise
 var defaultLocale = "en-US";
@@ -208,7 +204,7 @@ if(typeof chatlog.version === "undefined" || chatlog.version < dataVersion)
 else
 {
 	chatlog.list.forEach(function(item) {
-		$("#chatwindow").append(chatMessageHtml(item));
+		$("#chattable > tbody").append(chatMessageHtml(item));
 	});
 }
 var envJsonSource = "env.json";
@@ -333,7 +329,7 @@ function websocketConnect() {
 			{
 				let chatTimestamp = (typeof messageData["created_at"] !== "undefined" && messageData["created_at"] != "") ? messageData["created_at"] : Date.now();
 				var chatObject = {id: messageData["msg_id"], deleted: false, warning: true, timestamp: chatTimestamp, userDisplayName: messageData["target_user_login"], userId: parseFloat(messageData["target_user_id"]), message: `AUTOMOD: ${messageData["args"][2]}: ${messageData["args"][1]}` };
-				$("#chatwindow").append(chatMessageHtml(chatObject));
+				$("#chattable > tbody").append(chatMessageHtml(chatObject));
 				chatlog.list.push(chatObject);
 				localStorage.setItem("chattext", JSON.stringify(chatlog));
 				$(window).trigger("chatscroll");
@@ -500,7 +496,7 @@ function websocketConnect() {
 
 			if(!chatlog.list.find( ({ id }) => id === jsonData["id"]))
 			{
-				$("#chatwindow").append(chatMessageHtml(chatObject)); // hmm maybe here is the issue with dupes, because append chatwindow is used multiple times?
+				$("#chattable > tbody").append(chatMessageHtml(chatObject)); // hmm maybe here is the issue with dupes, because append chatwindow is used multiple times?
 				chatlog.list.push(chatObject);
 				localStorage.setItem("chattext", JSON.stringify(chatlog));
 			}
@@ -591,10 +587,10 @@ $("#toggleconfig").on("click", function(event){
 });
 $("#search").on("input", function(){
     let filteredList = filterChatItems(chatlog.list, $(this).val());
-	$("#chatwindow").html("");
+	$("#chattable > tbody").html("");
 	let filterCounter = 0;
 	filteredList.forEach(function(item) {
-		$("#chatwindow").append(chatMessageHtml(item));
+		$("#chattable > tbody").append(chatMessageHtml(item));
 		filterCounter++;
 	});
 	if($(this).val() == "")
@@ -711,7 +707,7 @@ $("#filterusers").on("input", function(){
 	}
 	$("#userlist h2").text(`Users: ${tempUserCount}`);
 });
-$("#chatwindow").on("click", "button.delete", function(event){
+$("#chattable > tbody").on("click", "button.delete", function(event){
 	var idx = chatlog.list.findIndex( ({ id }) => id === $(this).attr("data-deleteid") );
 	chatlog.list[idx].deleted = true;
 	chatlog = { version: dataVersion, list: chatlog.list };
@@ -759,7 +755,7 @@ $("#exportchatlog, #exportbannedusers").on("click", function(event){
 $(window).on("chatscroll", function(e) {
 	if((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight)
 	{
-		document.getElementById("chatwindow").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+		document.getElementById("chattable").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 	}
 });
 $("#chatmessage").on("keypress", function(event) {
@@ -769,7 +765,7 @@ $("#chatmessage").on("keypress", function(event) {
 		var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username.toLowerCase(), userName: "", isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: msg, occurances: 0 };
 		chatlog.list.push(chatObject);
 		localStorage.setItem("chattext", JSON.stringify(chatlog));
-		$("#chatwindow").html($("#chatwindow").html() + chatMessageHtml(chatObject));
+		$("#chattable > tbody").html($("#chattable > tbody").html() + chatMessageHtml(chatObject));
 		$(window).trigger("chatscroll");
 		$(this).val("");
 	}
@@ -788,7 +784,7 @@ $("#modmessage").on("keypress", function(event) {
 			var chatObject = {id: 0, deleted: false, warning: false, timestamp: Date.now(), userDisplayName: config.username.toLowerCase(), userName: "", isModerator: true, isSubscriber: true, isRaidListUser: false, userId: 0, message: `WHISPERS: (all mods) ${msg}`, occurances: 0 };
 			chatlog.list.push(chatObject);
 			localStorage.setItem("chattext", JSON.stringify(chatlog));
-			$("#chatwindow").append(chatMessageHtml(chatObject));
+			$("#chattable > tbody").append(chatMessageHtml(chatObject));
 			$(window).trigger("chatscroll");
 			$(this).val("");
 		}
@@ -854,70 +850,68 @@ $("#raidirl").on("click", function(event){
 });
 $("#userlistbutton").on("click", function(event){
 	$("#userlistoverlay").fadeIn("slow");
-	$("#userlistpopup").fadeIn("slow", function() {
-		$.getJSON(`${env.data.twitchUsersUrl}/${config.channel}`, function(data) {
-			let users = data;
-			//reset first then load new data on each click
-			$("#userlist p").html("");
-			$("#userlist h2").text(`Users: ${users.chatter_count}`);
-			if(users.chatters.admins.length > 0)
-			{
-				$("#userlist p").append(`<strong>Admins</strong><br/>`);
-				users.chatters.admins.forEach(function(item){
-					$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
-				});
-			}
-			if(users.chatters.broadcaster.length > 0)
-			{
-				$("#userlist p").append(`<strong>Broadcaster</strong><br/>`);
-				users.chatters.broadcaster.forEach(function(item){
-					$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
-				});
-				$("#userlist p").append(`<br/>`);
-			}
-			if(users.chatters.global_mods.length > 0)
-			{
-				$("#userlist p").append(`<strong>Global Mods</strong><br/>`);
-				users.chatters.global_mods.forEach(function(item){
-					$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
-				});
-				$("#userlist p").append(`<br/>`);
-			}
-			if(users.chatters.moderators.length > 0)
-			{
-				$("#userlist p").append(`<strong>Mods</strong><br/>`);
-				users.chatters.moderators.forEach(function(item){
-					$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
-				});
-				$("#userlist p").append(`<br/>`);
-			}
-			if(users.chatters.staff.length > 0)
-			{
-				$("#userlist p").append(`<strong>Staff</strong><br/>`);
-				users.chatters.staff.forEach(function(item){
-					$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
-				});
-				$("#userlist p").append(`<br/>`);
-			}
-			if(users.chatters.vips.length > 0)
-			{
-				$("#userlist p").append(`<strong>VIPs</strong><br/>`);
-				users.chatters.vips.forEach(function(item){
-					$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
-				});
-				$("#userlist p").append(`<br/>`);
-			}
-			if(users.chatters.viewers.length > 0)
-			{
-				$("#userlist p").append(`<strong>Viewers</strong><br/><span>new users <input id="newviewers" type="checkbox" value=""/></span><br/><span id="viewerslist">`);
-				users.chatters.viewers.forEach(function(item){
-					$("#viewerslist").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
-				});
-				$("#userlist p").append(`<br/></span>`);
-			}
-			if(env.data.debug) { console.log(data); }
-			tempUserList = users;
-		});
+	$.getJSON(`${env.data.twitchUsersUrl}/${config.channel}`, function(data) {
+		let users = data;
+		//reset first then load new data on each click
+		$("#userlist p").html("");
+		$("#userlist h2").text(`Users: ${users.chatter_count}`);
+		if(users.chatters.admins.length > 0)
+		{
+			$("#userlist p").append(`<strong>Admins</strong><br/>`);
+			users.chatters.admins.forEach(function(item){
+				$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
+			});
+		}
+		if(users.chatters.broadcaster.length > 0)
+		{
+			$("#userlist p").append(`<strong>Broadcaster</strong><br/>`);
+			users.chatters.broadcaster.forEach(function(item){
+				$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
+			});
+			$("#userlist p").append(`<br/>`);
+		}
+		if(users.chatters.global_mods.length > 0)
+		{
+			$("#userlist p").append(`<strong>Global Mods</strong><br/>`);
+			users.chatters.global_mods.forEach(function(item){
+				$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
+			});
+			$("#userlist p").append(`<br/>`);
+		}
+		if(users.chatters.moderators.length > 0)
+		{
+			$("#userlist p").append(`<strong>Mods</strong><br/>`);
+			users.chatters.moderators.forEach(function(item){
+				$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
+			});
+			$("#userlist p").append(`<br/>`);
+		}
+		if(users.chatters.staff.length > 0)
+		{
+			$("#userlist p").append(`<strong>Staff</strong><br/>`);
+			users.chatters.staff.forEach(function(item){
+				$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
+			});
+			$("#userlist p").append(`<br/>`);
+		}
+		if(users.chatters.vips.length > 0)
+		{
+			$("#userlist p").append(`<strong>VIPs</strong><br/>`);
+			users.chatters.vips.forEach(function(item){
+				$("#userlist p").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
+			});
+			$("#userlist p").append(`<br/>`);
+		}
+		if(users.chatters.viewers.length > 0)
+		{
+			$("#userlist p").append(`<strong>Viewers</strong><br/><span>new users <input id="newviewers" type="checkbox" value=""/></span><br/><span id="viewerslist">`);
+			users.chatters.viewers.forEach(function(item){
+				$("#viewerslist").append(`<a href="#" class="user" data-username="${item}">${item}</a><br/>`);
+			});
+			$("#userlist p").append(`<br/></span>`);
+		}
+		if(env.data.debug) { console.log(data); }
+		tempUserList = users;
 	});
 });
 //TODO finish (timeout or ban does not work on those yet)
@@ -967,12 +961,19 @@ $("#banfilteredusers, #timeoutfilteredusers").on("click", function(event){
 		}
 	}
 });
+$("#userlistoverlay button.btn-close").on("click", function(event) {
+	$("#userlistoverlay").fadeOut("slow");
+});
+/*
 $("#userlistclose, #userlistoverlay").on("click", function(event){
 	$("#userlistoverlay, #userlistpopup").fadeOut("slow");
 });
+*/
+/*
 $("#userclose, #useroverlay").on("click", function(event){
 	$("#useroverlay, #userpopup").fadeOut("slow");
 });
+*/
 $("#clearcommand").on("click", function(event){
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :.clear`);
 });
@@ -1005,13 +1006,21 @@ $("#userpopup").on("click", "#userunban", function(event){
 	if(env.data.debug) { console.log(bannedusers); }
 	localStorage.setItem("bannedusers", JSON.stringify(bannedusers));
 });
-$("#illaIRL").on("click", function(event){
-	window.location.href = "https://www.twitch.tv/illairl";
-});
 $("#botdefense").on("click", function(event){
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :!botdefense full`);
 });
 $('#videoPlayerToggle').on("click", function(event){
+	event.preventDefault();
+	if($("#videoPlayerToggle").hasClass("oi-fullscreen-exit"))
+	{
+		$("#videoPlayerToggle").removeClass("oi-fullscreen-exit");
+		$("#videoPlayerToggle").addClass("oi-fullscreen-enter");
+	}
+	else
+	{
+		$("#videoPlayerToggle").removeClass("oi-fullscreen-enter");
+		$("#videoPlayerToggle").addClass("oi-fullscreen-exit");
+	}
 	$("#videoPlayer iframe").toggle();
 });
 /*
