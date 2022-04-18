@@ -104,17 +104,10 @@ div#configarea {
  }
  #filterCounter
  {
-	max-width: 2rem;
-	max-height: 1rem;
-	padding: 0.5rem;
 	position: fixed;
-	background: #dfdfdf;
-	color: #000;
-	margin: 1rem auto;
 	z-index: 10;
 	display: none;
-	overflow: auto;
-	top: 10%;
+	top: 2rem;
 	left: 36%;
 	right: 0;
 	bottom: 0;

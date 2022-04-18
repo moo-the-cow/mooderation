@@ -603,7 +603,7 @@ $("#search").on("input", function(){
 	}
 	else
 	{
-		$("#filterCounter").text(filterCounter);
+		$("#filterCounter span").text(`Found items: ${filterCounter}`);
 		$("#filterCounter").show();
 	}
 });
