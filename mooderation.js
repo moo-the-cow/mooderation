@@ -170,7 +170,7 @@ const parseReturnMessage = msg => {
 const notificationAudio = new Audio("audio/notification.mp3");
 //first time visit always jump to the bottom of the chat
 $(function() {
-	document.getElementById("chatwindow").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+	document.getElementById("chattable").scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
 	$("#videoPlayerToast > div > small").text(defaultStreamer);
 });
 //INFO: use en-US per default unless configured otherwise
