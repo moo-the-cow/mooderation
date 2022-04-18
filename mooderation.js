@@ -729,7 +729,7 @@ $("button.command").on("click", function(event, sendToChat = true){
 		let cmd = $(this).attr("data-" + statusFlag);
 		twitchWebsocket.send(`PRIVMSG #${config.channel} :.${cmd}`);
 	}
-	$(this).attr("class", "command" + classFlag);
+	$(this).attr("class", "btn btn-danger command" + classFlag);
 	$(this).attr("data-current", statusFlag);
 });
 $("#gettoken").on("click", function(event){
