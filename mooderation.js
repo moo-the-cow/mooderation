@@ -839,8 +839,8 @@ $("#chattable").on("click", ".user", function(event){
 			$("#profile p").append(`Created at: ${(new Date(userData[0].created_at)).toLocaleString(defaultLocale, {timeZoneName: "short"})}<br/>`);
 		}
 		if(username != config.username) {
-			$("#profileactions").html(`<button id="shoutout" data-userid="${userid}" data-username="${username}">Shoutout</button><button id="usertimeout" class="danger" data-userid="${userid}" data-username="${username}">timeout</button><button id="userban" class="danger" data-userid="${userid}" data-username="${username}">ban</button><button id="useruntimeout" data-userid="${userid}" data-username="${username}">untimeout</button><button id="userunban" data-userid="${userid}" data-username="${username}">unban</button>`);
-			$("#profileactions").append(`<input id="userwhisper" type="text" placeholder="Send whisper to User ${username}" data-userid="${userid}" data-username="${username}" />`);
+			$("#profileactions").html(`<button id="shoutout" type="button" class="btn btn-primary" data-userid="${userid}" data-username="${username}">Shoutout</button><button id="usertimeout" type="button" class="btn btn-danger" data-userid="${userid}" data-username="${username}">timeout</button><button id="userban" type="button" class="btn btn-danger" data-userid="${userid}" data-username="${username}">ban</button><button id="useruntimeout" type="button" class="btn btn-primary" data-userid="${userid}" data-username="${username}">untimeout</button><button id="userunban" type="button" class="btn btn-primary" data-userid="${userid}" data-username="${username}">unban</button>`);
+			$("#profileactions").append(`<input id="userwhisper" type="text" class="form-control" placeholder="Send whisper to User ${username}" data-userid="${userid}" data-username="${username}" />`);
 		}
 		tempUserDetail = userData;
 	}
