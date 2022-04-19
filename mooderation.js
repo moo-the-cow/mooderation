@@ -964,10 +964,10 @@ $("#banfilteredusers, #timeoutfilteredusers").on("click", function(event){
 		}
 	}
 });
-$("#userlistoverlay, #userlistoverlay button.btn-close").on("click", function(event) {
+$("#userlistoverlay button.btn-close").on("click", function(event) {
 	$("#userlistoverlay").fadeOut("slow");
 });
-$("#useroverlay, #useroverlay button.btn-close").on("click", function(event) {
+$("#useroverlay button.btn-close").on("click", function(event) {
 	$("#useroverlay").fadeOut("slow");
 });
 /*
