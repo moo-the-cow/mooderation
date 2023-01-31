@@ -1,5 +1,6 @@
 # mooderation
 ## twitch moderation tool completely static html and json files (client side requests only!)
+## Currently working on more API usage, locally working well but I need to make it more flexible (so you can use it for your own streams)
 ![(work in progress)](https://github.com/moo-the-cow/mooderation/blob/master/changelog.md)
 
 ### Intention of that tool
