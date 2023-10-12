@@ -179,13 +179,13 @@ if(isConfigSet())
 {
 	defaultLocale = config.languagecountry;
 }
-var defaultStreamer = "kaarujp";
+var defaultStreamer = "m_o_o_";
 if(isConfigSet())
 {
 	defaultStreamer = config.channel;
 }
 $(function() {
-	var streamerList = ["kaarujp","nicocoyukari"];
+	var streamerList = ["m_o_o_","kaarujp"];
 	streamerList.forEach(function(item) {
 		var selectedFlag = "";
 		if(isConfigSet() && defaultStreamer == item)
@@ -448,7 +448,7 @@ function websocketConnect() {
 			let isVIP = jsonData["badges"] !== undefined && jsonData["badges"].includes("vip") ? true : false;
 			let foundStreamer = streamerdblist.list.find(({streamerTwitchId}) => Number(streamerTwitchId) == Number(jsonData["user-id"]))
 			let isStreamer = (typeof foundStreamer !== "undefined") ? true : false;
-			if(isStreamer && !tempStreamerAppearedList.includes(jsonData["user-id"]) && jsonData["user-id"] != 129043031 && jsonData["user-id"] != 587687323 && jsonData["user-id"] != 40164087) //the id is mine then nicole and then kaaru
+			if(isStreamer && !tempStreamerAppearedList.includes(jsonData["user-id"]) && jsonData["user-id"] != 129043031 && jsonData["user-id"] != 40164087) //the id is mine and then kaaru
 			{
 				new Notification("Streamer is posting!", {body: "Some streamer is posting something - attention!", vibrate: [200, 100, 200]});
 				notificationAudio.play();
@@ -980,6 +980,18 @@ $("#userclose, #useroverlay").on("click", function(event){
 	$("#useroverlay, #userpopup").fadeOut("slow");
 });
 */
+$("#startstream").on("click", function(event){
+	twitchWebsocket.send(`PRIVMSG #${config.channel} :!moobs start`);
+});
+$("#stopstream").on("click", function(event){
+	twitchWebsocket.send(`PRIVMSG #${config.channel} :!moobs start`);
+});
+$("#brbstream").on("click", function(event){
+	twitchWebsocket.send(`PRIVMSG #${config.channel} :!moobs scene brb`);
+});
+$("#livestream").on("click", function(event){
+	twitchWebsocket.send(`PRIVMSG #${config.channel} :!moobs scene live`);
+});
 $("#clearcommand").on("click", function(event){
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :.clear`);
 });
