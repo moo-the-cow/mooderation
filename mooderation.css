@@ -139,7 +139,7 @@ div#configarea {
 	z-index: 3;
 	position: fixed;
 	margin-top: 0;
-	top: 15rem;
+	top: 12rem;
 	right: 0;
 }
 #chatinputbox
@@ -148,7 +148,7 @@ div#configarea {
 }
 #chattable {
 	overflow: auto;
-	margin: 8rem 0 0 0;
+	margin: 10rem 0 0 0;
 }
 #chattable > thead > tr > th:nth-child(1) {
 	width: 5rem;
@@ -174,7 +174,7 @@ div#configarea {
 		z-index: 3;
 		position: fixed;
 		margin-top: 0;
-		top: 15rem;
+		top: 12rem;
 		right: 0;
 	}
 	#videoPlayerToast .toast-header {
@@ -182,6 +182,6 @@ div#configarea {
 	}
 	#chattable {
 		overflow: auto;
-		margin: 12rem 0 0 0;
+		margin: 14rem 0 0 0;
 	}
 }
