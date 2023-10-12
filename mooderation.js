@@ -1,6 +1,6 @@
 /* CONSTANTS */
 const dataVersion = 6;
-const client_id = "5dsbemnclyj3cigfl2wsgxnnmcevuu";
+const client_id = "x1wgmj5t5up8qns2v8ezt21785zp9b";
 /* Temporary objects stored in global variables */
 var tempStreamerAppearedList = [];
 var tempUserList = {};
