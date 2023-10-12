@@ -984,7 +984,7 @@ $("#startstream").on("click", function(event){
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :!moobs start`);
 });
 $("#stopstream").on("click", function(event){
-	twitchWebsocket.send(`PRIVMSG #${config.channel} :!moobs start`);
+	twitchWebsocket.send(`PRIVMSG #${config.channel} :!moobs stop`);
 });
 $("#brbstream").on("click", function(event){
 	twitchWebsocket.send(`PRIVMSG #${config.channel} :!moobs scene brb`);
