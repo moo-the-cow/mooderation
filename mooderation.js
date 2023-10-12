@@ -342,7 +342,7 @@ function websocketConnect() {
 	};
 	*/
 	
-	twitchWebsocket = new WebSocket("wss://irc-ws-r.chat.twitch.tv");
+	twitchWebsocket = new WebSocket("wss://irc-ws.chat.twitch.tv");
 
 	twitchWebsocket.onopen = event => {
 		if(env.data.debug) { console.log(event); }
