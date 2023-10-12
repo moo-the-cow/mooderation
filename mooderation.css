@@ -139,7 +139,7 @@ div#configarea {
 	z-index: 3;
 	position: fixed;
 	margin-top: 0;
-	top: 7rem;
+	top: 15rem;
 	right: 0;
 }
 #chatinputbox
@@ -174,7 +174,7 @@ div#configarea {
 		z-index: 3;
 		position: fixed;
 		margin-top: 0;
-		top: 5rem;
+		top: 15rem;
 		right: 0;
 	}
 	#videoPlayerToast .toast-header {
