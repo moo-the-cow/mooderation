@@ -190,7 +190,7 @@ if(isConfigSet())
 var defaultStreamer = "m_o_o_";
 if(config.username == "")
 {
-	config.username = defaultStreamer;
+	config.username = "m_o_o_bot";
 }
 if(isConfigSet())
 {
