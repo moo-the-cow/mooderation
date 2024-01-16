@@ -21,6 +21,10 @@ var streamerdblist = { list: [] };
 var excludemodwhisper = { list: [] };
 var languagecountries = { list: [] };
 /* METHODS */
+const getUrlParamValue = (name) => { 
+	urlParams = new URLSearchParams(window.location.search);
+	return urlParams.get(name);
+};
 const countOccurrences = (arr, val) => arr.reduce((a, v) => (v === val ? a + 1 : a), 0);
 const twitchApiXhr = (xhr, url) => {
 	xhr.open("GET", url);
@@ -167,6 +171,10 @@ const parseReturnMessage = msg => {
 	}
 };
 /* INIT */
+if(typeof getUrlParamValue("oauth") !== "undefined")
+{
+	config.oauth = getUrlParamValue("oauth");
+}
 const notificationAudio = new Audio("audio/notification.mp3");
 //first time visit always jump to the bottom of the chat
 $(function() {
@@ -180,6 +188,10 @@ if(isConfigSet())
 	defaultLocale = config.languagecountry;
 }
 var defaultStreamer = "m_o_o_";
+if(config.username == "")
+{
+	config.username = defaultStreamer;
+}
 if(isConfigSet())
 {
 	defaultStreamer = config.channel;
